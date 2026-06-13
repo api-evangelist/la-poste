@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/letter.json",
+  "title": "Letter",
+  "required": [
+    "addressee",
+    "parcel",
+    "service"
+  ],
+  "type": "object",
+  "properties": {
+    "service": {
+      "$ref": "#/components/schemas/Service"
+    },
+    "parcel": {
+      "$ref": "#/components/schemas/ParcelRequestV2"
+    },
+    "customsDeclarations": {
+      "$ref": "#/components/schemas/CustomsDeclarations"
+    },
+    "sender": {
+      "$ref": "#/components/schemas/Sender"
+    },
+    "addressee": {
+      "$ref": "#/components/schemas/Addressee"
+    },
+    "codSenderAddress": {
+      "$ref": "#/components/schemas/Address"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>This block contains tags and blocks related to the shipment (options, parcel, sender, addressee, customs).<br/>List sub-bocks (described below): <br/><ul><li>Service: type of product and prices, </li><li>Parcel: insurances and options, </li><li>Sender: sender,</li><li>Addressee: addressee, </li><li>CustomsDeclarations: customs.</li></ul></en><fr>Ce bloc contient des balises et blocs li\u00e9s \u00e0 l\u2019exp\u00e9dition (options, colis, exp\u00e9diteur, destinataire, douanes).<br/><br/>Liste des sous-blocs (d\u00e9crits plus bas) : <br/><ul><li>Service : type de produit et tarifs, </li><li>Parcel : assurances et options, </li><li>Sender : exp\u00e9diteur ou d\u00e9posant en retour </li><li>Addressee : destinataire,</li><li>CustomsDeclarations : douanes.</li></ul></fr></lang>"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/planpickuprequest.json",
+  "title": "PlanPickupRequest",
+  "required": [
+    "mailBoxPickingDate",
+    "parcelNumber",
+    "sender"
+  ],
+  "type": "object",
+  "properties": {
+    "contractNumber": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in \"Acess to the Web Service SLS/API Authentication\".</en><fr>Obsol\u00e8te. Utiliser l'apikey \u00e0 la place comme expliqu\u00e9 dans \"Acc\u00e8s au Web Service SLS/Authentification API\".</fr></lang>"
+    },
+    "password": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in \"Acess to the Web Service SLS/API Authentication\".</en><fr>Obsol\u00e8te. Utiliser l'apikey \u00e0 la place comme expliqu\u00e9 dans \"Acc\u00e8s au Web Service SLS/Authentification API\".</fr></lang>"
+    },
+    "parcelNumber": {
+      "type": "string",
+      "description": "<i>AN13</i> <br/>  <lang><en>Parcel number</en><fr>Num\u00e9ro de colis.</fr></lang>"
+    },
+    "mailBoxPickingDate": {
+      "type": "string",
+      "description": "<i>D</i> <br/>  <lang><en>Requested pick-up date. <br/><br/>Example: \"2022-06-25\"</en><fr>Date d\u2019emport demand\u00e9e.<br/><br/>Example: \\\"2022-06-25\\\"</fr></lang>",
+      "format": "date-time"
+    },
+    "sender": {
+      "$ref": "#/components/schemas/PlanPickupSender"
+    }
+  }
+}

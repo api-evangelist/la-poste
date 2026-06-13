@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/pickuplocation.json",
+  "title": "PickupLocation",
+  "type": "object",
+  "properties": {
+    "pointId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "$ref": "#/components/schemas/AddressPickupLocation"
+    },
+    "groupRouting": {
+      "type": "string"
+    },
+    "serviceLabel": {
+      "type": "string"
+    },
+    "sortDistribution": {
+      "type": "string"
+    },
+    "routingZipCode": {
+      "type": "string"
+    },
+    "netWork": {
+      "type": "string"
+    },
+    "idPartenaire": {
+      "type": "string"
+    },
+    "routingFileVersion": {
+      "type": "string"
+    }
+  }
+}

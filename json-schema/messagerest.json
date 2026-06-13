@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/messagerest.json",
+  "title": "MessageRest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "messageContent": {
+      "type": "string"
+    },
+    "replacementValues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReplacementValue"
+      }
+    }
+  }
+}

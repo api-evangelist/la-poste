@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/datahandler.json",
+  "title": "DataHandler",
+  "type": "object",
+  "properties": {
+    "dataSource": {
+      "$ref": "#/components/schemas/DataSource"
+    },
+    "name": {
+      "type": "string"
+    },
+    "inputStream": {
+      "type": "object"
+    },
+    "content": {
+      "type": "object"
+    },
+    "commandMap": {
+      "$ref": "#/components/schemas/CommandMap"
+    },
+    "transferDataFlavors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ActivationDataFlavor"
+      }
+    },
+    "preferredCommands": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CommandInfo"
+      }
+    },
+    "allCommands": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CommandInfo"
+      }
+    },
+    "contentType": {
+      "type": "string"
+    },
+    "outputStream": {
+      "type": "object"
+    }
+  }
+}

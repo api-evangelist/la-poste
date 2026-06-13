@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/zoneinfosroutage.json",
+  "title": "ZoneInfosRoutage",
+  "type": "object",
+  "properties": {
+    "trackingNumberRouting": {
+      "type": "string"
+    },
+    "controlKeyTrackingNumber": {
+      "type": "string"
+    },
+    "getrDepot": {
+      "type": "string"
+    },
+    "identificationDestination1": {
+      "type": "string"
+    },
+    "identificationDestination2": {
+      "type": "string"
+    },
+    "serviceMark": {
+      "type": "string"
+    },
+    "typeServiceLivraison": {
+      "type": "string"
+    },
+    "sortOrigin": {
+      "type": "string"
+    },
+    "sortDest": {
+      "type": "string"
+    },
+    "routingVersion": {
+      "type": "string"
+    },
+    "datePrinting": {
+      "type": "string"
+    },
+    "hourPrinting": {
+      "type": "string"
+    },
+    "numberVersionWS": {
+      "type": "string"
+    },
+    "msort": {
+      "type": "string"
+    }
+  }
+}

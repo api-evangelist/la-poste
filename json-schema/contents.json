@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/contents.json",
+  "title": "Contents",
+  "type": "object",
+  "properties": {
+    "article": {
+      "type": "array",
+      "description": "<i>SUB</i> <br/>  <lang><en>The block can be repeated up to 100 times.</en><fr>Le bloc article peut \u00eatre r\u00e9p\u00e9t\u00e9 jusqu\u2019\u00e0 100 fois.</fr></lang>",
+      "items": {
+        "$ref": "#/components/schemas/Article"
+      }
+    },
+    "category": {
+      "$ref": "#/components/schemas/Category"
+    },
+    "original": {
+      "type": "array",
+      "description": "<i>SUB</i> <br/>  <lang><en></en><fr>Bloc contenant le (ou les) set(s) de donn\u00e9es Original. <br/> Obligatoire pour les produits retours inter (7R) hors UE et 5R (OM). <br/> Au plus 5 sets de donn\u00e9es Original sont agr\u00e9\u00e9s.<br/> Les colis sont identifi\u00e9s selon l\u2019ensemble </fr></lang>",
+      "items": {
+        "$ref": "#/components/schemas/Original"
+      }
+    },
+    "explanations": {
+      "type": "string",
+      "description": "<i>AN1\u202635</i> <br/>  <lang><en></en><fr>A renseigner si la cat\u00e9gorie \u00ab retour de marchandise \u00bb ou \u00ab Autre \u00bb est choisie (cf. 0)</fr></lang>"
+    }
+  },
+  "description": "<lang><en>This block represents the type of shipment and list of articles to declare.<br/>Mandatory if articles are eligible for the CN23 form.</en><fr>Ce bloc repr\u00e9sente la nature de l\u2019envoi et liste des articles \u00e0 d\u00e9clarer. <br/> Obligatoire si les envois sont \u00e9ligibles \u00e0 la CN23. </fr></lang>"
+}

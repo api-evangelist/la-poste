@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "laposte": "https://developer.laposte.fr/vocab#",
+    "Provider": "schema:Organization",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "Parcel": {
+      "@id": "schema:ParcelDelivery"
+    },
+    "parcelNumber": "schema:trackingNumber",
+    "weight": {
+      "@id": "schema:weight",
+      "@type": "schema:QuantitativeValue"
+    },
+    "depositDate": {
+      "@id": "schema:expectedArrivalFrom",
+      "@type": "xsd:date"
+    },
+    "Address": "schema:PostalAddress",
+    "company": "schema:name",
+    "firstName": "schema:givenName",
+    "lastName": "schema:familyName",
+    "line2": "schema:streetAddress",
+    "city": "schema:addressLocality",
+    "zipCode": "schema:postalCode",
+    "countryCode": "schema:addressCountry",
+    "phoneNumber": "schema:telephone",
+    "mobileNumber": "schema:telephone",
+    "email": {
+      "@id": "schema:email",
+      "@type": "xsd:string"
+    },
+    "Sender": {
+      "@id": "schema:sender",
+      "@type": "schema:Person"
+    },
+    "Addressee": {
+      "@id": "schema:recipient",
+      "@type": "schema:Person"
+    },
+    "Letter": "laposte:ShipmentRequest",
+    "Service": "laposte:ShippingService",
+    "productCode": "laposte:productCode",
+    "orderNumber": "laposte:orderNumber",
+    "parcelRef": "laposte:parcelReference",
+    "CustomsDeclarations": {
+      "@id": "schema:CustomsDeclaration",
+      "@type": "laposte:CustomsDeclarations"
+    },
+    "Article": "laposte:CustomsArticle",
+    "description_article": "schema:description",
+    "quantity": "schema:offerCount",
+    "weight_article": "schema:weight",
+    "originCountry": "schema:addressCountry",
+    "OutputFormat": "laposte:OutputFormat",
+    "outputPrintingType": "laposte:printingType",
+    "GenerateLabelRequest": "laposte:GenerateLabelRequest",
+    "GenerateLabelResponse": "laposte:GenerateLabelResponse",
+    "messages": "laposte:messages",
+    "MessageRest": "laposte:Message",
+    "messageContent": "schema:description",
+    "type": "schema:additionalType",
+    "category": "schema:category",
+    "pickupDate": {
+      "@id": "schema:availabilityStarts",
+      "@type": "xsd:date"
+    },
+    "PlanPickupRequest": "laposte:PickupRequest",
+    "PlanPickupResponse": "laposte:PickupResponse",
+    "TrackingAPI": "laposte:TrackingAPI",
+    "trackingCode": "schema:trackingNumber",
+    "shipmentStatus": "schema:deliveryStatus",
+    "dataNOVA": "laposte:OpenDataPortal",
+    "dataset": "schema:dataset",
+    "postalCode": "schema:postalCode",
+    "postOffice": "schema:PostOffice",
+    "geocoordinates": "schema:GeoCoordinates",
+    "latitude": "schema:latitude",
+    "longitude": "schema:longitude"
+  }
+}

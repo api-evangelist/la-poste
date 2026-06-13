@@ -1,0 +1,42 @@
+{
+  "contractNumber": "YOUR_CONTRACT_NUMBER",
+  "password": "YOUR_PASSWORD",
+  "outputFormat": {
+    "x": 0,
+    "y": 0,
+    "outputPrintingType": "PDF_10x15_300dpi",
+    "dematerializedReturnLabel": false,
+    "returnTypeChoice": 3
+  },
+  "letter": {
+    "service": {
+      "productCode": "DOS",
+      "depositDate": "2026-06-13",
+      "orderNumber": "ORD-002",
+      "returnTypeChoice": 3
+    },
+    "parcel": {
+      "weight": 0.5,
+      "insuranceValue": 0
+    },
+    "sender": {
+      "company": "Test Sender SAS",
+      "lastName": "Sender",
+      "firstName": "Test",
+      "line2": "1 Rue du Test",
+      "countryCode": "FR",
+      "city": "Paris",
+      "zipCode": "75008",
+      "email": "sender@example.fr"
+    },
+    "addressee": {
+      "lastName": "Recipient",
+      "firstName": "Test",
+      "line2": "2 Rue du Destinataire",
+      "countryCode": "FR",
+      "city": "Marseille",
+      "zipCode": "13001",
+      "email": "recipient@example.fr"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/getlabelinternalrequest.json",
+  "title": "GetLabelInternalRequest",
+  "required": [
+    "outputPrintingType",
+    "parcelNumber"
+  ],
+  "type": "object",
+  "properties": {
+    "contractNumber": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "parcelNumber": {
+      "type": "string"
+    },
+    "outputPrintingType": {
+      "type": "string"
+    }
+  }
+}

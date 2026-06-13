@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/customizationfields.json",
+  "title": "CustomizationFields",
+  "type": "object",
+  "properties": {
+    "reference": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomizationTemplate"
+      }
+    },
+    "customizationField": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomizationField"
+      }
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr>Ce bloc peut \u00eatre utilis\u00e9 pour personnaliser la partie inf\u00e9ririeure de l'\u00e9tiquette <br/> </fr></lang>",
+  "xml": {
+    "name": "customizationFields"
+  }
+}

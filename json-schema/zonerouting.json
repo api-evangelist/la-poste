@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/zonerouting.json",
+  "title": "ZoneRouting",
+  "type": "object",
+  "properties": {
+    "zoneCABRoutage": {
+      "$ref": "#/components/schemas/ZoneCABRoutage"
+    },
+    "zoneInfosRoutage": {
+      "$ref": "#/components/schemas/ZoneInfosRoutage"
+    }
+  }
+}

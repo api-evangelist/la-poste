@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/getlabelrequest.json",
+  "title": "GetLabelRequest",
+  "type": "object",
+  "properties": {
+    "parcelNumber": {
+      "type": "string",
+      "description": "<i>AN13</i> <br/>  <lang><en>Parcel number</en><fr>Num\u00e9ro de colis.</fr></lang>"
+    },
+    "outputPrintingType": {
+      "type": "string",
+      "description": "<i>L</i> <br/> <lang><en>Label printing format.</en><fr>Format d'impression des \u00e9tiquettes.</fr></lang>"
+    }
+  }
+}

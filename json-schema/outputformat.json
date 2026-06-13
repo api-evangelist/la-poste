@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/outputformat.json",
+  "title": "OutputFormat",
+  "required": [
+    "outputPrintingType",
+    "x",
+    "y"
+  ],
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "integer",
+      "description": "<i>N-9999\u20269999</i> <br/> <lang><en>By default, enter \"false\" (or \"0\"). <br/>Allows horizontal adjustment of printing on the label (expressed in points): <br/><ul><li>if x < 0: the label is shifter to the right</li><li>if x > 0: the label is shifted to the left</li></ul></en><fr>Par d\u00e9faut, mettre \u00e0 \"false\" (ou \"0\"). <br/>Permet d\u2019ajuster le d\u00e9calage horizontal de l\u2019impression sur l\u2019\u00e9tiquette (exprim\u00e9 en points): <br/><ul><li>si x < 0: l'\u00e9tiquette est d\u00e9cal\u00e9e \u00e0 droite.</li><li>si x > 0: l'\u00e9tiquette est d\u00e9cal\u00e9e \u00e0 gauche.</li></ul></fr></lang>",
+      "format": "int32"
+    },
+    "y": {
+      "type": "integer",
+      "description": "<i>N-120\u2026120</i> <br/> <lang><en>By default, enter \"false\" (or \"0\"). <br/>Allows vertical adjustment of printing on the label (expressed in points): <br/><ul><li>if y < 0: the label is shifter up</li><li>if y > 0: the label is shifted down</li></ul></en><fr>Par d\u00e9faut, mettre \u00e0 \"false\" (ou \"0\"). <br/>Permet d\u2019ajuster le d\u00e9calage vertical de l\u2019impression sur l\u2019\u00e9tiquette (exprim\u00e9 en points) : <br/><ul><li>si y < 0: l'\u00e9tiquette est d\u00e9cal\u00e9e en haut.</li><li>si y > 0: l'\u00e9tiquette est d\u00e9cal\u00e9e en bas.</li></ul></fr></lang>",
+      "format": "int32"
+    },
+    "outputPrintingType": {
+      "type": "string",
+      "description": "<i>L</i> <br/> <lang><en>Label printing format.</en><fr>Format d'impression des \u00e9tiquettes.</fr></lang>"
+    },
+    "dematerialized": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/> <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>"
+    },
+    "returnType": {
+      "type": "string",
+      "description": "<i>L</i> <br/> <lang><en>Used if the tag productCode is <b>CORE (8R)</b> or <b>CORF (CQ).</b><br/><br/>Defines the label transmission mode. By default, the label is sent in the Web Service response only.<br/>Possible values:<br/><ul><li>SendPDFByMail: the label is also sent by email, as an attachment, to the address indicated in the \u201csender block\u201d.</li><li>SendPDFLinkByMail: the label is also sent by email, as a hypertext link, to the address indicated in the \u201csender block\u201d.</li></ul></en><fr>D\u00e9finit le mode de transmission de l\u2019\u00e9tiquette.</b></b> Utilis\u00e9 pour le Colissimo Retour uniquement.</b>Par d\u00e9faut, l\u2019\u00e9tiquette est envoy\u00e9e uniquement dans la r\u00e9ponse du Web Service.</b></b> Valeurs possibles : <br/><ul><li>SendPDFByMail : l\u2019\u00e9tiquette est \u00e9galement envoy\u00e9e par e-mail en tant que pi\u00e8ce jointe \u00e0 l\u2019adresse renseign\u00e9e dans le bloc \u00ab sender \u00bb.</li> <li>SendPDFLinkByMail : l\u2019\u00e9tiquette est \u00e9galement envoy\u00e9e par e-mail sous forme de lien hypertexte \u00e0 l\u2019adresse renseign\u00e9e dans le bloc \u00ab sender \u00bb.</li></ul> </fr></lang>"
+    },
+    "printCODDocument": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/> <lang><en>Allow you to print the CRBT document <br/><br/> Default: false</en><fr>Permettre d\u2019imprimer le document CRBT <br/>Par d\u00e9faut : false</fr></lang>"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>This block contains the sub-tags linked to the format of the data sent by the Web Service</en><fr>Ce bloc contient les balises li\u00e9es au format des \u00e9ditions renvoy\u00e9es par le Web Service.</fr></lang>"
+}

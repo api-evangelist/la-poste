@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/swisslabel.json",
+  "title": "SwissLabel",
+  "type": "object",
+  "properties": {
+    "injectionSite": {
+      "type": "string"
+    },
+    "signatureOption": {
+      "type": "boolean"
+    },
+    "codeSwissPost": {
+      "type": "string"
+    },
+    "swissParcelNumber": {
+      "type": "string"
+    }
+  }
+}

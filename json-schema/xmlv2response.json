@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/xmlv2response.json",
+  "title": "XmlV2Response",
+  "type": "object",
+  "properties": {
+    "parcelNumber": {
+      "type": "string"
+    },
+    "parcelNumberPartner": {
+      "type": "string"
+    },
+    "contractNumber": {
+      "type": "string"
+    },
+    "sitePCH": {
+      "$ref": "#/components/schemas/Site"
+    },
+    "pickupLocation": {
+      "$ref": "#/components/schemas/PickupLocation"
+    },
+    "sender": {
+      "$ref": "#/components/schemas/Sender"
+    },
+    "addressee": {
+      "$ref": "#/components/schemas/Addressee"
+    },
+    "routing": {
+      "$ref": "#/components/schemas/Routing"
+    },
+    "zoneRouting": {
+      "$ref": "#/components/schemas/ZoneRouting"
+    },
+    "belgiumLabel": {
+      "$ref": "#/components/schemas/BelgiumLabel"
+    },
+    "barCodePCH": {
+      "type": "string"
+    },
+    "numberPCH": {
+      "type": "string"
+    },
+    "barCodeCityssimo": {
+      "type": "string"
+    },
+    "barCodeRouting": {
+      "type": "string"
+    },
+    "numberRouting": {
+      "type": "string"
+    },
+    "swissLabel": {
+      "$ref": "#/components/schemas/SwissLabel"
+    },
+    "hazmat": {
+      "$ref": "#/components/schemas/DataHandler"
+    },
+    "elementVisual": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ElementVisual"
+      }
+    },
+    "cabAztec": {
+      "type": "string"
+    },
+    "fields": {
+      "$ref": "#/components/schemas/Fields"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/article.json",
+  "title": "Article",
+  "required": [
+    "description",
+    "quantity",
+    "value",
+    "weight"
+  ],
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "<i>AN1\u202664</i> <br/>  <lang><en>Detailed description of the article. Appears on CN23 document.<br/>Must be in English for the US and for shipments with the DDP option.</en><fr>Description d\u00e9taill\u00e9e de l\u2019article. <br/> Appara\u00eet sur le fichier CN23. <br/>Obligatoirement en anglais pour les US et pour les envois avec l'option DDP</fr></lang>"
+    },
+    "quantity": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Number of articles of this type. Appears on CN23 document.</en><fr>Nombre d\u2019articles de ce type. <br/> Appara\u00eet sur le fichier CN23. </fr></lang>",
+      "format": "int32"
+    },
+    "weight": {
+      "type": "number",
+      "description": "<i>N</i> <br/>  <lang><en>Unitary net weight of the articles in kg. Appears on CN23 document.</en><fr>Poids net unitaire des articles en kg. <br/> Appara\u00eet sur le fichier CN23. </fr></lang>",
+      "format": "float"
+    },
+    "value": {
+      "type": "number",
+      "description": "<i>N</i> <br/>  <lang><en>Unitary value of articles in EUROS.<br/>Appears on CN23 document.</en><fr>Valeur unitaire des articles en EURO. <br/> Appara\u00eet sur le fichier CN23.</fr></lang>",
+      "format": "float"
+    },
+    "hsCode": {
+      "type": "string",
+      "description": "<i>N6, N8 ou N10</i> <br/>  <lang><en>Mandatory if is 3 (commercial shipment). <br/>Mandatory for 7R and 5R return products. Then its size must be 6 or 11.<br/><br/>Tariff number corresponding to the article. It will be necessary to indicate 6, 8 or 10 digits for the international shipments requiring a customs declaration. <br/><br/>Appears on CN23 document.</en><fr>Num\u00e9ro tarifaire correspondant \u00e0 l\u2019article. <br/><br/> Il faudra indiquer 6, 8 ou 10 chiffres pour les envois \u00e0 l\u2019international n\u00e9cessitant une d\u00e9claration douani&egrave;re.  <br/> Un code erreur 30519 appara\u00eetra dans la r\u00e9ponse du Web Service si la balise est mal renseign\u00e9e. <br/><br/> Obligatoire si category vaut 3 (envoi commercial). <br/><br/> Obligatoire pour les produits retours 7R et 5R. Il doit \u00eatre de taille 6 ou 11 <br/><br/> Appara\u00eet sur le fichier CN23. </fr></lang>"
+    },
+    "originCountry": {
+      "type": "string",
+      "description": "<i>A2</i> <br/>  <lang><en>ISO code of the country of origin of the article. <br/><br/> Mandatory for 7R and 5R return products. It must be identical for all declared articles.<br/><br/> Mandatory if category = 3 (commercial shipment). <br/><br/>Country name appears on CN23 document. <br/><br/> If filled in, check that the country code is A2 otherwise set FR by default. <br/>If the country code is different from the format A2, the WS sls will return an error.</en><fr>Code ISO du pays d\u2019origine de l\u2019article. <br/><br/> Obligatoire pour les produits retours 7R et 5R. Il doit \u00eatre identique pour tous les articles d\u00e9clar\u00e9s <br/><br/>  Obligatoire si category=3 (envoi commercial) <br/><br/> Le nom du pays apparait en entier sur le fichier CN23. <br/><br/> Si non vide, v\u00e9rifier que le code pays est sur A2 sinon mettre FR par d\u00e9faut.  <br/><br/> Si le code pays est diff\u00e9rent du format A2, le WS sls retournera une erreur</fr></lang>"
+    },
+    "originCountryLabel": {
+      "type": "string",
+      "description": "<lang><en>Label</en><fr>Libell\u00e9</fr></lang>"
+    },
+    "currency": {
+      "type": "string",
+      "description": "<i>AN3</i> <br/>  <lang><en>Set EUR by default if empty<br/><br/>Mandatory for 7R and 5R return products.<br/><br/>The currency must be the same for all declared articles. It must belong to the list {USD, EUR, CHF, GBP, CNY, JPY, CAD, AUD}. If the currency is different from the list above, the Web Service will return an error.|</en><fr>Devise. <br/><br/>Fix\u00e9 par d\u00e9faut en EUR si vide<br/><br/>Obligatoire pour les produits de retour 7R et 5R.<br/><br/>La devise doit \u00eatre la m\u00eame pour tous les articles d\u00e9clar\u00e9s. Elle doit appartenir \u00e0 la liste {USD, EUR, CHF, GBP, CNY, JPY, CAD, AUD}. Si la devise est diff\u00e9rente de la liste ci-dessus, le service web renverra une erreur.</fr></lang>"
+    },
+    "artref": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Mandatory for 7R and 5R return products.<br/><br/>Article reference, serial number.</en><fr>R\u00e9f\u00e9rence de l\u2019article, num\u00e9ro de s&eacute;rie. <br/><br/> Obligatoire pour les produits retours inter (7R) hors UE et 5R (OM).</fr></lang>"
+    },
+    "originalIdent": {
+      "type": "string",
+      "description": "<i>A1</i> <br/>  <lang><en>Mandatory for 7R and 5R return products. <br/><br/>Key for identifying the outgoing invoice and the parcel related to the article.<br/><br/>Link up the parcel number with its sequencing: <br/><ul><li>if the article belongs to the 1st parcel, indicate A; </li><li>If the article belongs to the 3rd parcel, indicate C;</li><li>etc</li></ul></en><fr>Cl\u00e9 permettant d\u2019identifier la facture aller et le colis li\u00e9 \u00e0 l\u2019article. <br/><br/> Obligatoire pour les produits retours inter (7R) hors UE et 5R(OM). <br/> Appairer le num\u00e9ro de colis avec son ordonnancement : <br/> <ul> <li>si l\u2019article appartient au 1er colis, indiquer A ;</li> <li>si l\u2019article appartient au 3\u00e8me colis, indiquer C ;</li> <li>etc \u2026</li> </ul> </fr></lang>"
+    },
+    "vatAmount": {
+      "type": "number",
+      "description": "<i>N</i> <br/>  <lang><en>VAT on items</en><fr>TVA des articles</fr></lang>",
+      "format": "float"
+    },
+    "customsFees": {
+      "type": "number",
+      "description": "<i>N</i> <br/>  <lang><en>Customs duties on items</en><fr>Droits Douane des articles</fr></lang>",
+      "format": "float"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>The block can be repeated up to 100 times.</en><fr>Le bloc article peut \u00eatre r\u00e9p\u00e9t\u00e9 jusqu\u2019\u00e0 100 fois.</fr></lang>"
+}

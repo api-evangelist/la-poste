@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/address.json",
+  "title": "Address",
+  "required": [
+    "countryCode",
+    "zipCode"
+  ],
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>companyName <br/><br/>For return postage (product code CORE 8R, CORI 7R or 5R), the company name is mandatory for the recipient.</en><fr>Raison sociale. <br/><br/>Pour un affranchissement retour (code produit CORE 8R, CORI 7R ou 5R), la raison sociale est obligatoire pour le destinataire</fr></lang>"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "<i>A1...35</i> <br/>  <lang><en>Last name.<br/>Mandatory to send a parcel unless zipcode is a cedex Code</en><fr>Nom.<br/><br/>Obligatoire pour envoyer un colis sauf si le code postal est un code cedex</fr></lang>"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "<i>A1...29</i> <br/>  <lang><en>First name.<br/>Mandatory for out-of-home delivery (product code HD)</en><fr>Pr\u00e9nom.<br/><br/>Obligatoire pour un envoi hors domicile (code produit HD)</fr></lang>"
+    },
+    "line0": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Floor, hallway, stairs, apartment.<br/><br/><b>Important: this line does not appear on labels being sent to Switzerland.</b></en><fr>Etage, couloir, escalier, appart.</fr></lang>"
+    },
+    "line1": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Entrance, bulding, residence.<br/><br/><b>Important: this line does not appear on labels being sent to Switzerland.</b></en><fr>Entr\u00e9e, b\u00e2timent, immeuble, r\u00e9sidence.</fr></lang>"
+    },
+    "line2": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Number and route label.<br/><br/>Example: \u00ab 5 rue du Bellay \u00bb<br/><br/>must contain at least one character</en> <fr>Num\u00e9ro et libell\u00e9 de voie.<br/><br/> Exemple : \u00ab 5 rue du Bellay \u00bb<br/><br/>doit comporter imp\u00e9rativement au moins un caract\u00e8re</fr></lang>"
+    },
+    "line3": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Place said or other mention.<br/><br/><b>Important: this line does not appear on labels being sent to Switzerland.</b></en><fr>Lieu dit ou autre mention.</fr></lang>"
+    },
+    "countryCode": {
+      "type": "string",
+      "description": "<i>A2</i> <br/>  <lang><en>ISO country code on 2 letters.<br/>Example: \u00ab FR \u00bb for France</en><fr>Code ISO du pays sur 2 lettres.<br/><br/>Ex : \u00ab FR \u00bb pour la France </fr></lang>"
+    },
+    "city": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Town.<br/><br/>Can be left blank (or else filled in by a chain of some sort, possibly not adequate) if the tag zipCode is filled with a Cedex code. *</en><fr>Ville.<br/><br/> Peut \u00eatre laiss\u00e9e vide (ou aussi bien renseign\u00e9e par une cha\u00eene quelconque, \u00e9ventuellement non appropri\u00e9e) si la balise zipCode est renseign\u00e9e par un code Cedex. * </fr></lang>"
+    },
+    "zipCode": {
+      "type": "string",
+      "description": "<i>AN5</i> <br/>  <lang><en>Postal code.<br/>If the postcode matches a Cedex code then:<br/><ul><li>the tag line2 can be left blank,</li><li>the tag city can be left blank.</li></ul></en><fr>Code postal.<br/><br/> Si le code postal correspond \u00e0 un code Cedex alors :<br/> <ul> <li>la balise line2 peut \u00eatre laiss\u00e9e vide,</li> <li>la balise city peut \u00eatre laiss\u00e9e vide.</li></ul><br/></fr></lang>"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "description": "<i>AN10...12</i> <br/> <lang><en>Phone Number.</en><br/><fr>Num\u00e9ro de t\u00e9l\u00e9phone.</fr></lang>"
+    },
+    "mobileNumber": {
+      "type": "string",
+      "description": "<i>AN</i> <br/> <lang><en>The cell phone number is strongly recommended to improve the chances of delivery to the recipient (it is used to send tracking notifications by SMS).<br/>Checks performed :<ul><li>15 characters maximum</li><li>For Belgium parcel, the format must be exactly : +324NNNNNNNN</li></ul>It must be filled in for the following packages :<ul><li>Domestic out-of-home parcels (productCode=HD)</li><li>Parcels with DDP option</li><li>Parcels to the US</li></ul><br/><br/>For any international shipment, it is necessary to use the telephone prefix specific to the country in which your recipient is located.<br/><br/>The digits of the number must not follow an incremental sequence (e.g., 123456789), otherwise the WebService will return an error.</en><br/><fr>Le num\u00e9ro de portable est fortement recommand\u00e9 pour am\u00e9liorer les chances de livraison au destinataire (il est notamment utilis\u00e9 pour l'envoi des notifications de suivi par SMS).<br/>Contr\u00f4les effectu\u00e9s :<ul><li>15 caract\u00e8res maximum</li><li>Pour les envois vers la Belgique, le format doit \u00eatre exactement : +324NNNNNNNN</li></ul>Il doit \u00eatre renseign\u00e9 obligatoirement pour les colis suivants :<ul><li>Colis hors domicile (productCode=HD) nationaux</li><li>Colis avec l'option DDP</li><li>Colis vers les US</li></ul><br/><br/>Pour tout envoi \u00e0 l'international, il est n\u00e9cessaire d\u2019utiliser le pr\u00e9fixe t\u00e9l\u00e9phonique sp\u00e9cifique au pays dans lequel se trouve votre destinataire.<br/><br/>les chiffres du num\u00e9ro ne doivent pas se suivre de mani\u00e8re incr\u00e9mentale (ex. : 123456789), sinon le WebService retournera une erreur.</fr></lang>"
+    },
+    "doorCode1": {
+      "type": "string",
+      "description": "<i>AN1...8</i> <br/>  <lang><en>Door code 1.<br/>Doesn\u2019t appear on the CN23 document.</en><fr>Code porte 1.<br/><br/>N\u2019appara\u00eet pas sur la CN23.</fr></lang>"
+    },
+    "doorCode2": {
+      "type": "string",
+      "description": "<i>AN1...8</i> <br/>  <lang><en>Door code 2.<br/>Doesn\u2019t appear on the CN23 document.</en><fr>Code porte 2.<br/><br/>N\u2019appara\u00eet pas sur la CN23.</fr></lang>"
+    },
+    "intercom": {
+      "type": "string",
+      "description": "<i>AN1...30</i> <br/>  <lang><en>Interphone.<br/><br/>Doesn\u2019t appear on the CN23 document.</en><fr>Interphone.<br/><br/>N\u2019appara\u00eet pas sur la CN23.</fr></lang>"
+    },
+    "email": {
+      "type": "string",
+      "description": "<i>AN5...80</i> <br/>  <lang><en>Mandatory if the tag productCode is <b>HD</b>.<br/><br/>Email Address.<br/>Used for follow-up notifications to the sender.<br/>Expected form: Text@Text.Text.</en><fr>Obligatoire pour les envois hors domiciles <br/><br/> Adresse courriel.<br/><br/>Utilis\u00e9 pour les notifications de suivi \u00e0 l\u2019exp\u00e9diteur.<br/><br/>Forme attendue : Texte@Texte.Texte  </fr></lang>"
+    },
+    "language": {
+      "type": "string",
+      "description": "<i>A2</i> <br/>  <lang><en>By default, the local language of the sending country.<br/>Language of the notification e-mail to the sender.<br/>Used for tracking notifications by email or SMS.<br/>The information is transmitted to local partners who can exploit it or not.</en><fr>Langue du mail de notification \u00e0 l\u2019exp\u00e9diteur.<br/><br/> Utilis\u00e9e pour les retours de colis avec le code produit <b>CORI</b> (7R) si la balise returnType est renseign\u00e9e. <br/><br/> Utilis\u00e9e pour les notifications de suivi par email ou SMS.<br/>Par d\u00e9faut : FR <br/><br/> Langues disponibles : ES, IT, NL, EN, DE. </fr></lang>"
+    },
+    "stateOrProvinceCode": {
+      "type": "string",
+      "description": "<i>AN2</i> <br/>  <lang><en>State or province code. Required for the United States.</en><fr>Code de l'\u00e9tat ou de la province. Obligatoire pour les Etats Unis.</fr></lang>"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr></fr></lang>"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/sender.json",
+  "title": "Sender",
+  "type": "object",
+  "properties": {
+    "senderParcelRef": {
+      "type": "string",
+      "description": "<i>AN1...17</i> <br/>  <lang><en>Sender Order Number.<br/>It displays the customer reference only on the label. This data is not reflected in the Colissimo IT System and will not be visible in OSC.</en><fr>R\u00e9f\u00e9rence de commande de l\u2019exp\u00e9diteur. <br/> <b>Elle permet d\u2019afficher la r\u00e9f\u00e9rence client seulement sur l\u2019\u00e9tiquette.</b><br/>  <b>Cette donn\u00e9e n\u2019est pas remont\u00e9e dans le SI Colissimo et ne sera pas visible dans l'outil de Suivi Colis.</b>  </fr></lang>"
+    },
+    "address": {
+      "$ref": "#/components/schemas/Address"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr></fr></lang>"
+}

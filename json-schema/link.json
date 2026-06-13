@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/link.json",
+  "title": "Link",
+  "type": "object",
+  "properties": {
+    "uriBuilder": {
+      "$ref": "#/components/schemas/UriBuilder"
+    },
+    "rel": {
+      "type": "string"
+    },
+    "rels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "params": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

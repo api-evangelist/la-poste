@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/activationdataflavor.json",
+  "title": "ActivationDataFlavor",
+  "type": "object",
+  "properties": {
+    "mimeType": {
+      "type": "string"
+    },
+    "humanPresentableName": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/customsdeclarations.json",
+  "title": "CustomsDeclarations",
+  "type": "object",
+  "properties": {
+    "includeCustomsDeclarations": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Allows to include, in the response of the web service, the generation of a CN23 document in PDF format, relating to the articles declared in the web service request.<br/><br/>The CN23 document:<br/><ul><li>Is included by default in the web service response (the tag is \"true\" -or \"1\"),</li><li>Is not generated if the value of the tag is \"false\" (or \"0\")</li></ul>  <br/> \"includeCustomsDeclarations = 1\" tag is mandatory for shipments eligible for dematerialization of customs documents (DDP option or DOM TOM shipment).</en><fr>Permet d\u2019inclure, dans la r\u00e9ponse du web service, la g\u00e9n\u00e9ration d\u2019un document CN23 au format PDF portant sur les articles d\u00e9clar\u00e9s dans la requ\u00eate web service. <br/><br/> Par d\u00e9faut vaut \"true\" (ou \"1\") pour inclure le document CN23 dans la r\u00e9ponse du web service.  <br/><br/> Indiquez \"false\" (ou \"0\") pour ne pas inclure le document CN23 dans la r\u00e9ponse du web service. <br/><br/> La balise \u00ab includeCustomsDeclarations = 1 \u00bb est obligatoire pour les envois \u00e9ligibles \u00e0 la d\u00e9mat\u00e9rialisation des documents douaniers (option DDP ou envoi Outre-Mer). </fr></lang>"
+    },
+    "numberOfCopies": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Number of CN23 to print<br/>If the tag is not filled in, 4 copies of CN23 will be printed.<br/>The number goes from 1 included to 4 copies max. <br/> Note: international returns do not take into account the value entered here, due to their specific format.</en><fr>Nombre de CN23 \u00e0 imprimer Si la balise n\u2019est pas renseign\u00e9e 4 exemplaires de CN23 seront imprim\u00e9s. Le nombre va de 1 compris \u00e0 4 exemplaires max. <br/> Remarque : les produits retours internationaux ne tiennent pas compte de par leur format sp\u00e9cifique de la valeur renseign\u00e9e ici.</fr></lang>",
+      "format": "int32"
+    },
+    "contents": {
+      "$ref": "#/components/schemas/Contents"
+    },
+    "importersReference": {
+      "type": "string",
+      "description": "<i>AN1\u202635</i> <br/>  <lang><en>Importer's reference, TVA number<br/>Appears on the CN23 document for shipments.<br/>Not used for returns.</en><fr>R\u00e9f\u00e9rence de l\u2019importateur, Num\u00e9ro de TVA.<br/><br/> Appara\u00eet sur le fichier CN23 pour les envois.<br/>N\u2019est pas utilis\u00e9 pour les retours. </fr></lang>"
+    },
+    "importersContact": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Importer's contact (tel./e-mail).<br/>Doesn\u2019t appear on CN23 document.</en><fr>Contact (t\u00e9l./e-mail) de l\u2019importateur. <br/> N\u2019appara\u00eet pas sur le fichier CN23.</fr></lang>"
+    },
+    "officeOrigin": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Office origin.<br/>Doesn\u2019t appear on CN23 document.</en><fr>Bureau d\u2019origine. <br/> N\u2019appara\u00eet pas sur le fichier CN23.</fr></lang>"
+    },
+    "comments": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Observations<br/>Appears on CN23 document.</en><fr>Observations<br/>Appara\u00eet sur le fichier CN23</fr></lang>"
+    },
+    "description": {
+      "type": "string",
+      "description": "<i>AN1.. ??</i> <br/>  <lang><en>Mandatory in the case of a DDP shipment<br/>Generic description of articles in English.<br/>Example: Textile items, Shoes, Music instrument, Hair dryer, etc.</en><fr>Description g\u00e9n\u00e9rique des articles en anglais. <br/> Obligatire dans le cas d\u2019un envoi DDP <br/> Exemple : Textile items, Shoes, Music instrument, Hair dryer, etc  </fr></lang>"
+    },
+    "invoiceNumber": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Identifier of related invoice document.<br/>Appears in the \u00ab N\u00b0 de la facture \u00bb field on the CN23 document.</en><fr>Identifiant du document facture li\u00e9.<br/> Appara\u00eet dans le champ \u00ab N\u00b0 de la facture \u00bb sur la CN23.</fr></lang>"
+    },
+    "licenceNumber": {
+      "type": "string",
+      "description": "<i>AN1\u202635</i> <br/>  <lang><en>Identifier of the related import license document.<br/>Appears in the \u00ab N\u00b0 de la/les licences \u00bb field on the CN23 document.</en><fr>Identifiant du document de licence d\u2019importation li\u00e9. <br/> Appara\u00eet dans le champ \u00ab N\u00b0 de la/les licences \u00bb sur la CN23.</fr></lang>"
+    },
+    "certificatNumber": {
+      "type": "string",
+      "description": "<i>AN1\u202635</i> <br/>  <lang><en>Identifier of the related certificate number document.<br/><br/>Appears in the \u00ab N\u00b0 du/des certificats \u00bb field on the CN23 document.</en><fr>Identifiant du document de certificat li\u00e9. <br/> Appara\u00eet dans le champ \u00ab N\u00b0 du/des certificats \u00bb sur la CN23.</fr></lang>"
+    },
+    "importerAddress": {
+      "$ref": "#/components/schemas/Address"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>These parameters are mandatory only for destinations requiring a CN23 customs declaration.</en><fr>Ces param\u00e8tres ne sont obligatoires que pour les destinations n\u00e9cessitant une d\u00e9claration douani\u00e8re de type CN23.</fr></lang>"
+}

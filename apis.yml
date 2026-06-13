@@ -110,6 +110,8 @@ apis:
     properties:
       - type: Documentation
         url: https://www.colissimo.fr/doc-colissimo/redoc-sls/en
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/openapi/colissimo-shipping-openapi.json
       - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/colissimo-plans.yml
       - type: RateLimits

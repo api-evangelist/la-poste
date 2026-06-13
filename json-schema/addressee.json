@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/addressee.json",
+  "title": "Addressee",
+  "required": [
+    "address"
+  ],
+  "type": "object",
+  "properties": {
+    "addresseeParcelRef": {
+      "type": "string",
+      "description": "<i>AN1...15</i> <br/>  <lang><en>Recipient order reference.<br/><b>It allows the destination reference to be displayed only on the label. This data is not reflected in the Colissimo IT System and will not be visible in OSC. Its size must not exceed 15. </b></en><fr>R\u00e9f\u00e9rence de commande du destinataire <br/> Elle permet d'afficher la r\u00e9f\u00e9rence destinataire seulement sur l'\u00e9tiquette. Cette donn\u00e9e n'est pas remont\u00e9e dans le SI Colissimo et ne sera pas visible dans OSC. Sa taille ne doit pas exc\u00e9der 15.</fr></lang>"
+    },
+    "codeBarForReference": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Used for Colissimo Retour only (tag productCode is <b>CORE</b>).<br/>Allows to indicate (or not) the reference of the order of the recipient in the form of a bar code on the label of the package.<br/>Enter \"true\" (or \"1\") to show the value of the tag addresseeParcelRef as a barcode on the parcel label.</en><fr>Par d\u00e9faut, renseigner \"false \" (ou \"0\").</fr></lang>"
+    },
+    "serviceInfo": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Used for Colissimo Retour only (tag productCode is <b>CORE</b>).<br/>Name of the department in the company.<br/>Example: \"Returns department\".</en><fr></fr></lang>"
+    },
+    "promotionCode": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (usage interne \u00e0 la poste uniquement)</fr></lang>"
+    },
+    "address": {
+      "$ref": "#/components/schemas/Address"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr></fr></lang>"
+}

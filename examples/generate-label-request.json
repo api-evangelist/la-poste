@@ -1,0 +1,67 @@
+{
+  "contractNumber": "YOUR_CONTRACT_NUMBER",
+  "password": "YOUR_PASSWORD",
+  "outputFormat": {
+    "x": 0,
+    "y": 0,
+    "outputPrintingType": "PDF_10x15_300dpi",
+    "dematerializedReturnLabel": false,
+    "returnTypeChoice": 3
+  },
+  "letter": {
+    "service": {
+      "productCode": "DOS",
+      "depositDate": "2026-06-13",
+      "mailBoxPickingDate": "2026-06-14",
+      "orderNumber": "ORD-001",
+      "commercialName": "Mon Colis",
+      "totalAmount": 0,
+      "returnTypeChoice": 3,
+      "redeliveryOption": "R",
+      "instructions": "Laisser en main propre"
+    },
+    "parcel": {
+      "weight": 1.5,
+      "insuranceValue": 0,
+      "recommendationLevel": "P0",
+      "nonMachinable": false,
+      "codAmountToBeCollected": 0,
+      "ftd": false
+    },
+    "customsDeclations": null,
+    "sender": {
+      "senderParcelRef": "MY-REF-001",
+      "company": "Ma Societe SAS",
+      "lastName": "Dupont",
+      "firstName": "Jean",
+      "line2": "10 Rue de la Paix",
+      "countryCode": "FR",
+      "city": "Paris",
+      "zipCode": "75001",
+      "phoneNumber": "0600000000",
+      "mobileNumber": "",
+      "doorCode1": "",
+      "doorCode2": "",
+      "email": "jean.dupont@example.fr",
+      "language": "FR",
+      "intercom": ""
+    },
+    "addressee": {
+      "addresseeParcelRef": "CLIENT-REF-001",
+      "company": "",
+      "lastName": "Martin",
+      "firstName": "Marie",
+      "line2": "5 Avenue des Champs",
+      "countryCode": "FR",
+      "city": "Lyon",
+      "zipCode": "69001",
+      "phoneNumber": "0611111111",
+      "mobileNumber": "0611111111",
+      "doorCode1": "",
+      "doorCode2": "",
+      "intercom": "",
+      "email": "marie.martin@example.fr",
+      "language": "FR"
+    }
+  }
+}

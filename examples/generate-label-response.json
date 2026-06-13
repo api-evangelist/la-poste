@@ -1,0 +1,21 @@
+{
+  "messages": [
+    {
+      "id": "0",
+      "type": "INFOS",
+      "messageContent": "Votre colis a bien été enregistré.",
+      "category": "LABEL"
+    }
+  ],
+  "parcel": {
+    "parcelNumber": "6X1234567890",
+    "parcelNumberPartner": "",
+    "retailPointPickupNumber": "",
+    "statusCode": "200"
+  },
+  "label": null,
+  "cn23": null,
+  "customDocumentV2": null,
+  "appendices": null,
+  "pdfUrl": ""
+}

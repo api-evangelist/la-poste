@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/commandinfo.json",
+  "title": "CommandInfo",
+  "type": "object",
+  "properties": {
+    "commandClass": {
+      "type": "string"
+    },
+    "commandName": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/category.json",
+  "title": "Category",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "integer",
+      "description": "<i>N1</i> <br/>  <lang><en>Mandatory for products subject to a CN23 form.<br/>Type of shipment.</en><fr>Nature de l'envoi. <br/>Obligatoire pour les produits soumis \u00e0 la CN23.</fr></lang>",
+      "format": "int32"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>Mandatory for products subject to a CN23 form. <br/><br/>Block containing the tag related to the nature of the shipment.</en><fr>Bloc contenant la balise li\u00e9e \u00e0 la nature de l\u2019envoi. <br/><br/> Obligatoire pour les produits soumis \u00e0 la CN23.</fr></lang>"
+}

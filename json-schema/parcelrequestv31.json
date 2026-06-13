@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/parcelrequestv31.json",
+  "title": "ParcelRequestV31",
+  "required": [
+    "weight"
+  ],
+  "type": "object",
+  "properties": {
+    "parcelNumber": {
+      "type": "string",
+      "description": "<i>AN13</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>"
+    },
+    "insuranceAmount": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>",
+      "format": "int32"
+    },
+    "insuranceValue": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Insured value <br/><br/>  By default, enter \"0\".<br/><br/>If the insurance option is chosen, enter the amount of the desired insurance level by selecting among one of the 6 levels below . <br/> The amount must be written in cents. Example: 500000 for 5,000 EUR.<br/><br/> If the value entered does not match one of the 6 levels of insurance available, the value will be changed the level in which the entered amount is located. Example: 16200 for 162 EUR will become 30000 for 300 EUR. <br/><br/> 6 optional insurance levels: <br/> <ul> <li>150 EUR ; </li> <li>300 EUR ; </li> <li>500 EUR ; </li> <li>1000 EUR ; </li> <li>2000 EUR ; </li> <li>5000 EUR ;</li></ul><br/>Maximum= 5000\u20ac.</en><fr>Valeur assur\u00e9e. <br/><br/> Par d\u00e9faut, renseigner \"0\". <br/> Si l\u2019option d\u2019assurance est choisie, renseigner le montant du niveau d\u2019assurance souhait\u00e9 parmi les 6 niveaux propos\u00e9s. Le montant doit \u00eatre exprim\u00e9 en centimes. Exemple : 500000 pour 5000 EUR. <br/><br/> Si la valeur renseign\u00e9e ne correspond pas \u00e0 l\u2019un des 6 niveaux d\u2019assurance, la valeur affich\u00e9e sera celle du niveau dans lequel le montant renseign\u00e9 se situe. Exemple : 16200 soit 162 EUR, deviendra 30000 EUR soit 300 EUR. <br/><br/>6 niveaux d\u2019assurance optionnelle : <br/> <ul> <li>150 EUR ; </li> <li>300 EUR ; </li> <li>500 EUR ; </li> <li>1000 EUR ; </li> <li>2000 EUR ; </li> <li>5000 EUR ;</li></ul><br/>Maximum= 5000\u20ac.</fr></lang>",
+      "format": "int32"
+    },
+    "recommendationLevel": {
+      "type": "string",
+      "description": "<lang><en>Level</en><fr>Niveau</fr></lang>"
+    },
+    "weight": {
+      "type": "number",
+      "description": "<i>N</i> <br/>  <lang><en>Weight of parcel in kg. <br/> Example: \"5.50\". <br/><br/> <b>parameter \"weight\":</b> <ul> <li>Parcel weight in kg,</li> <li>Minimum: 0.01kg,</li> <li>Maximum: 30.00 kg or the maximum weight authorised by the pick-up location</li> <li>Only 2 decimals different from 0 are accepted.</li> </ul> <br/> <b>The status of the customer account:</b> a terminated customer account will not allow labels to be generated. </en><fr>Poids du colis en kg. <br/> Exemple : \"5.50\". </fr></lang>",
+      "format": "float"
+    },
+    "nonMachinable": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Parcel format.<br/>If productCode is <b>HD</b>, enter \"false\" (or \"0\") by default.<br/>Enter \"true\" (or \"1\") to indicate that parcel format is non-standard (non-machinable).</en><fr>Format du colis. <br/> Si la balise productCode a les codes <b>HD</b> renseigner \"false\" (ou \"0\") par d\u00e9faut. <br/> Passer \u00e0 \"true\" (ou \"1\") pour indiquer que le format du colis est non standard (non m\u00e9canisable). </fr></lang>"
+    },
+    "returnReceipt": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Advice of receipt</en><fr>Avis de r\u00e9ception. <br/><br/> Par d\u00e9faut, renseigner \"false \" (ou \"0\"). </fr></lang>"
+    },
+    "instructions": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Additional information:<br/><ul><li>For the delivery labels,</li><li>For Colissimo Return labels (return pattern).</li></ul>Example for a delivery: \"to the left of interior gate\".</en><fr>Permet d\u2019afficher sur l\u2019\u00e9tiquette : <br/> <ul> <li>Des indications compl\u00e9mentaires pour la livraison,</li> <li>Le motif du retour.</li> </ul>  <br/>  Exemple pour une livraison : \u00ab \u00e0 gauche au portail int\u00e9rieur \u00bb. </fr></lang>"
+    },
+    "pickupLocationId": {
+      "type": "string",
+      "description": "<i>N6</i> <br/>  <lang><en>Pick-up location identifier for Colissimo out of home delivery.<br/>This tag:<br/><ul><li>Must be entered if the tag productCode is <b>HD</b></li><li>Must be blank if the tag productCode is <b>DOM or DOS.</b></li></ul>If the network code is \"X00\", the block <fields> must be set.</en><fr>Identifiant du point de retrait pour une livraison Colissimo hors domicile. <br/><br/> Cette balise : <br/> <ul> <li>Doit \u00eatre renseign\u00e9e si productCode vaut <b>HD</b></li> <li>Doit \u00eatre vide si productCode vaut <b>DOM</b> ou <b>DOS.</b></li> </ul> <br/> Si le code r\u00e9seau est \"X00\", il sera obligatoire de renseigner le bloc fields.  </fr></lang>"
+    },
+    "ftd": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>For overseas shipments <br/>Mandatory, to be filled in by \"true\" (or \"1\"), for shipments to Overseas France only.</en><fr>Pour les envois vers l'outre-mer <br/><br/> Par d\u00e9faut, renseigner \"false \" (ou \"0\"). <br/><br/>Obligatoire, \u00e0 renseigner par \"true \" (ou \"1\"), pour les envois vers l\u2019Outre-Mer uniquement.   </fr></lang>"
+    },
+    "ddp": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false <br/>- For international shipments <br/>Indicate \"1\" if the package is ddp</en><fr>Pour les envois vers l\u2019international <br/><br/> Indiquer \u00ab 1 \u00bb si le colis est ddp, <br/><br/> Par d\u00e9faut, renseigner \u00ab 0 \u00bb (z\u00e9ro) </fr></lang>"
+    },
+    "disabledDeliveryBlockingCode": {
+      "type": "string",
+      "description": "<lang><en>Prerequisite: you must have activated the \"Code Bloquant\" service on the Colissimo Box.<br/><br/>Indicates whether delivery should be made without a blocking code (if no value is entered, eligible parcels will be delivered with a blocking code).<br/><br/>1 = true: Deactivates the blocking code<br/>0 = False: Does not deactivate the blocking code<br/>Empty = False: Does not deactivate the blocking code</en><fr>Pr\u00e9requis : avoir activ\u00e9 le service \"Code Bloquant\" sur la Colissimo Box<br/><br/>Indique si la livraison doit se faire sans code bloquant. (Si aucune valeur n'est renseign\u00e9e, les colis \u00e9ligibles seront livr\u00e9s avec code bloquant)<br/><br/>1 = true : D\u00e9sactive le code bloquant<br/>0 = False : Ne d\u00e9sactive pas le code bloquant<br/>Vide = False : Ne d\u00e9sactive pas le code bloquant</fr></lang>"
+    },
+    "hazmatFlag": {
+      "type": "boolean",
+      "description": "<lang><en>Indicates whether the package contains a hazardous material</en><fr>Indique si le colis contient une mati\u00e8re dangereuse</fr></lang>"
+    },
+    "hazmatCategory": {
+      "type": "string",
+      "description": "<lang><en>Code (as defined in the contract) of the hazardous material category</en><fr>Code (comme d\u00e9finit dans le contrat) de la cat\u00e9gorie de mati\u00e8re dangereuse</fr></lang>"
+    },
+    "hazmatPrintLogo": {
+      "type": "boolean",
+      "description": "<lang><en>Indicates whether the hazardous materials logo should be printed after the label. The logo will be printed in a 10x10 format only.</en><fr>Indique si le logo de mati\u00e8res dangereuses doit \u00eatre imprim\u00e9 apr\u00e8s l\u2019\u00e9tiquette. Le logo sera imprim\u00e9 dans un format 10x10 uniquement.</fr></lang>"
+    },
+    "postCommand": {
+      "type": "boolean"
+    },
+    "cod": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Indicates whether delivery should be made on a reimbursable basis.</en><fr>Indique si la livraison doit se faire contre remboursement. <br/> <br/> Par d\u00e9faut, renseigner \"0\" (z\u00e9ro). <br/><br/>  Passer \u00e0 \"true\" (ou \"1\") si la livraison doit se faire contre remboursement.  </fr></lang>"
+    },
+    "codcurrency": {
+      "type": "string",
+      "description": "<lang><en>COD currency</en><fr>COD devise</fr></lang>"
+    },
+    "codamount": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Default: false (or 0)<br/>Mandatory if the value of the tag COD is \"true\" (or \"1\").<br/>Amount expected for cash on delivery.</en><fr>Montant attendu pour une livraison contre remboursement.  <br/><br/> Par d\u00e9faut, renseigner \"false\" (ou \"0\"). <br/><br/> Obligatoire si la valeur de la balise COD est \"true\" (ou \"1\"). </fr></lang>",
+      "format": "int32"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr></fr></lang>"
+}

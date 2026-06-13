@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/belgiumlabel.json",
+  "title": "BelgiumLabel",
+  "type": "object",
+  "properties": {
+    "codeVAS": {
+      "$ref": "#/components/schemas/CodeVAS"
+    },
+    "identification": {
+      "type": "string"
+    },
+    "codeBarre": {
+      "type": "string"
+    },
+    "returnAddress": {
+      "$ref": "#/components/schemas/ReturnAddressBelgium"
+    }
+  }
+}

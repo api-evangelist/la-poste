@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/getlistmailboxpickingdatessender.json",
+  "title": "GetListMailBoxPickingDatesSender",
+  "required": [
+    "zipCode"
+  ],
+  "type": "object",
+  "properties": {
+    "line0": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Floor, corridor, stairwell, flat number</en><fr>Etage, couloir, escalier, appartement.</fr></lang>"
+    },
+    "line1": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Entrance, building, residence. </en><fr>Entr\u00e9e, b&acirc;timent, immeuble, r\u00e9sidence.</fr></lang>"
+    },
+    "line2": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Number and street name. <br/><br/>Example: \"5 rue du Bellay\"</en><fr>Num\u00e9ro et libell\u00e9 de voie.<br/><br/>Example: \\\"5 rue du Bellay\\\"</fr></lang>"
+    },
+    "line3": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Named place or other mention</en><fr>Lieu-dit ou autre mention.</fr></lang>"
+    },
+    "city": {
+      "type": "string",
+      "description": "<i>AN35</i> <br/>  <lang><en>Municipality</en><fr>Commune.</fr></lang>"
+    },
+    "zipCode": {
+      "type": "string",
+      "description": "<i>AN5</i> <br/>  <lang><en>Postcode</en><fr>Code postal.</fr></lang>"
+    },
+    "countryCode": {
+      "type": "string",
+      "description": "<i>A2</i> <br/>  <lang><en>Only the \"FR\" value is authorised. <br/>Country code.</en><fr>Code pays.<br/>Seule la valeur \u00ab FR \u00bb est autoris\u00e9e.</fr></lang>"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en>Block containing sender's address</en><fr>Bloc contenant les coordonn\u00e9es du d\u00e9posant en retour.</fr></lang>"
+}

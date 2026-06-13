@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/labelv2response.json",
+  "title": "LabelV2Response",
+  "type": "object",
+  "properties": {
+    "label": {
+      "$ref": "#/components/schemas/DataHandler"
+    },
+    "cn23": {
+      "$ref": "#/components/schemas/DataHandler"
+    },
+    "parcelNumber": {
+      "type": "string"
+    },
+    "parcelNumberPartner": {
+      "type": "string"
+    },
+    "pdfUrl": {
+      "type": "string"
+    },
+    "fields": {
+      "$ref": "#/components/schemas/Fields"
+    }
+  }
+}

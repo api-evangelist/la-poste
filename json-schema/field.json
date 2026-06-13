@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/field.json",
+  "title": "Field",
+  "required": [
+    "key",
+    "value"
+  ],
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "<i>A</i> <br/>  <lang><en>Key word to be informed</en><fr>Mot clef \u00e0 renseigner</fr></lang>"
+    },
+    "value": {
+      "type": "string",
+      "description": "<i>AN32</i> <br/>  <lang><en>The expected value is the order identifier in the SI Colissimo.</en><fr>Valeur attendue dans l'ordre identifi\u00e9 du SI Colissimo</fr></lang>"
+    }
+  }
+}

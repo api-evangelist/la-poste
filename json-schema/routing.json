@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/routing.json",
+  "title": "Routing",
+  "type": "object",
+  "properties": {
+    "destinationCountry": {
+      "type": "string"
+    },
+    "serviceText": {
+      "type": "string"
+    },
+    "depotDest": {
+      "type": "string"
+    },
+    "serviceMark": {
+      "type": "string"
+    },
+    "sortOrigin": {
+      "type": "string"
+    },
+    "groupingPriorityLabel": {
+      "type": "string"
+    },
+    "sortDest": {
+      "type": "string"
+    },
+    "barcodeId": {
+      "type": "string"
+    },
+    "routingVersion": {
+      "type": "string"
+    },
+    "destinationCountryText": {
+      "type": "string"
+    },
+    "partnerType": {
+      "type": "string"
+    },
+    "barcodePostcode": {
+      "type": "string"
+    },
+    "buAlphaStr": {
+      "type": "string"
+    },
+    "buCode": {
+      "type": "string"
+    },
+    "getcSort": {
+      "type": "string"
+    },
+    "destinationDepot": {
+      "type": "string"
+    },
+    "destinationDepotCountry": {
+      "type": "string"
+    },
+    "destinationDepotStr": {
+      "type": "string"
+    },
+    "getdSort": {
+      "type": "string"
+    },
+    "groupingPriority": {
+      "type": "string"
+    },
+    "networkCode": {
+      "type": "string"
+    },
+    "getoSort": {
+      "type": "string"
+    },
+    "partnerCode": {
+      "type": "string"
+    },
+    "getsSort": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "getdCountry": {
+      "type": "string"
+    },
+    "getdDepotCountry": {
+      "type": "string"
+    },
+    "getdDepot": {
+      "type": "string"
+    },
+    "getdDepotStr": {
+      "type": "string"
+    }
+  }
+}

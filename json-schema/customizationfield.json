@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/customizationfield.json",
+  "title": "CustomizationField",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "x": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "y": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "taille": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

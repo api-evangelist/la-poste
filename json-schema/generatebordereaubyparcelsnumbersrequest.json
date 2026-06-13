@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/generatebordereaubyparcelsnumbersrequest.json",
+  "title": "GenerateBordereauByParcelsNumbersRequest",
+  "type": "object",
+  "properties": {
+    "contractNumber": {
+      "type": "string",
+      "description": "<i>N6</i> <br/>  <lang><en>Account number</en><fr>Num\u00e9ro de compte</fr></lang>"
+    },
+    "password": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Password</en><fr>mot de passe</fr></lang>"
+    },
+    "generateBordereauParcelNumberList": {
+      "$ref": "#/components/schemas/generateBordereauParcelNumberList"
+    },
+    "fields": {
+      "$ref": "#/components/schemas/Fields"
+    }
+  }
+}

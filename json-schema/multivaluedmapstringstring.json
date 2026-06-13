@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/multivaluedmapstringstring.json",
+  "title": "MultivaluedMapStringString",
+  "type": "object",
+  "properties": {
+    "empty": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": {
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  }
+}

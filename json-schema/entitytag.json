@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/entitytag.json",
+  "title": "EntityTag",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "string"
+    },
+    "weak": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/zonecabroutage.json",
+  "title": "ZoneCABRoutage",
+  "type": "object",
+  "properties": {
+    "barCodeRouting": {
+      "type": "string"
+    },
+    "parcelNumberRouting": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/service.json",
+  "title": "Service",
+  "required": [
+    "depositDate",
+    "productCode"
+  ],
+  "type": "object",
+  "properties": {
+    "productCode": {
+      "type": "string",
+      "description": "<i>L</i> <br/>  <lang><en>Code indicating the desired product.<br/>Example: code <b>CORE</b> for Colissimo Return.<br/>If the tag is:<br/><ul><li><b>HD</b>, the tag pickupLocationId must be entered,</li><li><b>DOM or DOS</b>, the tag pickupLocationId should not be entered.</li></ul></en><fr>Code d\u00e9signant l\u2019offre produit souhait\u00e9e. <br/><br/> Exemple : code <b>CORE</b> pour Colissimo Retour. <br/><br/>  Si la balise vaut : <ul><li><b>HD</b> la balise pickupLocationId doit \u00eatre renseign\u00e9e,</li> <li><b>DOM</b> ou <b>DOS</b>, la balise pickupLocationId ne doit pas \u00eatre renseign\u00e9e.</li></ul></fr></lang>"
+    },
+    "depositDate": {
+      "type": "string",
+      "description": "<i>D</i> <br/>  <lang><en>Scheduled deposit date in the La Poste network.Example: \"2022-06-25\".</en><fr>Date de d\u00e9p\u00f4t pr\u00e9visionnelle dans le r\u00e9seau La Poste. <br/><br/> Exemple : \"2022-06-25\"</fr></lang>",
+      "format": "date-time"
+    },
+    "mailBoxPicking": {
+      "type": "boolean",
+      "description": "<i>B</i> <br/>  <lang><en>Default: false<br/>Used if the tag <productCode> is <b>CORE (8R) or CORF (CQ).</b><br/><br/>Use if the former recipient of the parcel wishes to return it by placing it in his mailbox (offer \u201creturn mailbox\u201d).<br/>Enter \"true\" (or \"1\") so that the parcel, returned by its former recipient, can be collected by a Colissimo agent from the mailbox of the former recipient.</en><fr>Demander la collecte du colis retourn\u00e9 \u00e0 partir d'une bo\u00eete aux lettres (retour BAL).<br/><br/> Utilis\u00e9 pour autoriser le retour des colis en bo\u00eete aux lettres. <br/><br/>  Utilis\u00e9 pour le code <b>CORE (8R)</b><br/> et <b>CORF (CQ).</b>  <br/><br/>  Par d\u00e9faut, renseigner \"false\" (ou \"0\"). <br/><br/> Doit valoir \"true\" (ou \"1\") pour que le colis retourn\u00e9 par son ancien destinataire puisse \u00eatre collect\u00e9 par un agent de Colissimo \u00e0 partir de la bo\u00eete aux lettres de l\u2019ancien destinataire. </fr></lang>"
+    },
+    "mailBoxPickingDate": {
+      "type": "string",
+      "description": "<i>D</i> <br/>  <lang><en>Used if the tag <productCode> is <b>CORE (8R) or CORF (CQ).</b><br/>Mandatory only if mailBoxPicking is \"true\" (or \"1\").<br/>Date requested for picking up from the mailbox.<br/>Example: \"2022-06-25\".<br/>To find out the next available date, call the getListMailBoxPickingDates method.<br/></en><fr>Date d\u2019emport en bo\u00eete aux lettres demand\u00e9e.<br/><br/> Utilis\u00e9 pour le code <b>CORE (8R)</b> et <b>CORF (CQ).</b><br/><br/> Obligatoire (et pris en compte) seulement si mailBoxPicking vaut \"true\" (ou \"1\"). <br/><br/> Exemple : 2015-12-23 <br/>  Pour conna\u00eetre la prochaine date possible, appeler la m\u00e9thode getListMailBoxPickingDates .  </fr></lang>",
+      "format": "date-time"
+    },
+    "vatCode": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>",
+      "format": "int32"
+    },
+    "vatPercentage": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>",
+      "format": "int32"
+    },
+    "vatAmount": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Not used (La Poste internal use only)</en><fr>Non utilis\u00e9 (utilisation interne \u00e0 La Poste uniquement)</fr></lang>",
+      "format": "int32"
+    },
+    "transportationAmount": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Default: false<br/><br/>Basic shipping price (carriage costs) without any options. In euro cents.<br/><br/>Example: 4530 for 45.30\u20ac.<br/>Does not appear in the CN23 form.<br/></en><fr>Prix du transport de base (frais de port) sans les options \u00e9ventuelles. <br/><br/> En centi\u00e8mes d\u2019euro <br/> Exemple : 4530 pour 45,30\u20ac. <br/> Par d\u00e9faut, passer \u00e0 \"0\". <br/>  N\u2019appara\u00eet pas dans le formulaire CN23. </fr></lang>",
+      "format": "int32"
+    },
+    "totalAmount": {
+      "type": "integer",
+      "description": "<i>N</i> <br/>  <lang><en>Mandatory for parcels requiring a CN23 declaration.<br/>Basic shipping price increased by the price of shipment options. In euro cents.<br/>Example: 4530 for 45.30\u20ac.<br/> Appears in the CN23 form in the \"Frais de port\" field.</en><fr>Prix du transport de base augment\u00e9 du prix des options de l\u2019envoi. <br/><br/>Obligatoire pour les colis n\u00e9cessitant une d\u00e9claration CN23. <br/><br/> En centi\u00e8mes d\u2019euro.<br/>  Exemple : 4530 pour 45,30\u20ac. <br/> Appara\u00eet dans le formulaire CN23 dans le champ \u00ab Frais de port \u00bb. </fr></lang>",
+      "format": "int32"
+    },
+    "orderNumber": {
+      "type": "string",
+      "description": "<i>AN1\u202630</i> <br/>  <lang><en>Customer's order number.<br/>Does not appear on the label but will be included in the Colissimo IT System.<br/>Returned in tracking information.<br/>Can be useful for searching for parcels using this field in the OSC tracking system (appears in the \"r\u00e9f. client.\" field).</en><fr>R\u00e9f\u00e9rence de commande du client. <br/><br/> <b>N\u2019apparait pas sur l\u2019\u00e9tiquette mais est int\u00e9gr\u00e9 dans le SI Colissimo.</b> <br/> <b>Renvoy\u00e9e dans les fichiers de suivi de colis (EDI-Retour).</b> <br/><br/> Peut \u00eatre utile pour rechercher des colis selon ce champ dans l'outil de Suivi Colis (appara\u00eet dans le champ \u00ab r\u00e9f. client \u00bb). </fr></lang>"
+    },
+    "commercialName": {
+      "type": "string",
+      "description": "<i>AN</i> <br/>  <lang><en>Commercial name of the shipper.<br/>The tag is:<br/><ul><li>Mandatory if tag <productCode> is <b>HD</b></li><li>Not mandatory if tag <productCode> is <b>DOM, DOS</b></li></ul>This name will be displayed in e-mail notifications sent to the parcel addressees.</en><fr>Nom commercial du chargeur.<br/><br/>  Cette balise : <br/> <ul><li><b>Est obligatoire si productCode vaut HD</b></li><li>Facultative si productCode vaut <b>DOM, DOS,</b></li></ul> <br/> Ce nom sera affich\u00e9 dans les notifications par e-mail faites aux destinataires des colis.  </fr></lang>"
+    },
+    "returnTypeChoice": {
+      "type": "integer",
+      "description": "<i>L</i> <br/>  <lang><en>Indicates whether the parcel must be returned to the sender in case of non-delivery of the parcel.<br/>Mandatory for certain international parcels, according to the applicable tariff areas.</en><fr>Indique si le colis doit \u00eatre retourn\u00e9 \u00e0 l\u2019exp\u00e9diteur en cas de <span style='text-decoration: underline;text-decoration-style: double;'>non distribution</span> du colis. <br/><br/> Obligatoire pour certains colis \u00e0 l\u2019international selon les zones tarifaires applicables. </fr></lang>",
+      "format": "int32"
+    },
+    "reseauPostal": {
+      "type": "string",
+      "description": "<i>B</i> <br/>  <lang><en>This parameter enables the possibility to choose the network responsible of the shipping (DPD or the local postal network), for international shipments.  <br/> <ul><li><b>reseauPostal = 0 => Select DPD network</b></li><li><b>reseauPostal = 1 => Select local postal network</b></li></ul></en><fr>Ce param\u00e8tre permet de choisir le r\u00e9seau postal responsable de la livraison (DPD ou r\u00e9seau postal local) pour tout envoi de colis \u00e0 l\u2019international parmi les pays concern\u00e9s et sur les produits concern\u00e9s. <br/><br/> <ul><li><b>reseauPostal = 0 => Choix DPD</b></li> <li><b>reseauPostal = 1 => Choix r\u00e9seau postal local</b></li></ul> <br/><br/> Le code erreur <b>30027</b> s\u2019affiche lorsqu\u2019un r\u00e9seau postal (DPD ou r\u00e9seau postal local) est choisit pour un produit qui ne comporte par l\u2019option s\u00e9lectionn\u00e9e.  </fr></lang>"
+    }
+  },
+  "description": "<i>SUB</i> <br/>  <lang><en></en><fr></fr></lang>"
+}

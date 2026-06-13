@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/la-poste/main/json-schema/original.json",
+  "title": "Original",
+  "type": "object",
+  "properties": {
+    "originalIdent": {
+      "type": "string",
+      "description": "<i>A1</i> <br/>  <lang><en>Mandatory for 7R and 5R return products. <br/><br/>Key for identifying the invoice and outgoing parcel related to the article.<br/>Link up the parcel number with its sequencing: <br/><ul><li>if the article belongs to the 1st parcel, indicate A;</li><li>If the article belongs to the 3rd parcel, indicate C; </li><li>etc.</li></ul></en><fr>Cl\u00e9 permettant d\u2019identifier la facture et colis aller li\u00e9s \u00e0 l\u2019article. <br/><br/> Obligatoire pour les produits retours inter (7R) hors UE et 5R(OM). <br/><br/> Appairer le num\u00e9ro de colis avec son ordonnancement :<br/><ul> <li>si l\u2019article appartient au 1er colis, indiquer A ;</li> <li>si l\u2019article appartient au 3\u00e8me colis, indiquer C ;</li> <li>etc \u2026</li> </ul> </fr></lang>"
+    },
+    "originalInvoiceNumber": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Mandatory for a return parcel.<br/><br/>Original invoice number for a return parcel.</en><fr>Num\u00e9ro de la facture d\u2019origine du colis. <br/><br/> Obligatoire pour un colis Retour.</fr></lang>"
+    },
+    "originalInvoiceDate": {
+      "type": "string",
+      "description": "<i>AN10</i> <br/>  <lang><en>Mandatory for a return parcel. <br/><br/>Original invoice date for a return parcel. YYYY-MM-DD format is expected. The date must be before or the same as today\u2019s date</en><fr>Date de la facture d\u2019origine du colis. <br/><br/> Obligatoire pour un colis Retour. <br/><br/> Format attendu AAAA-MM-JJ. <br/><br/> Doit \u00eatre ant\u00e9rieure ou \u00e9gale \u00e0 la date du jour.</fr></lang>",
+      "format": "date-time"
+    },
+    "originalParcelNumber": {
+      "type": "string",
+      "description": "<i>AN1...35</i> <br/>  <lang><en>Mandatory for a return parcel.<br/><br/>Original parcel number.</en><fr>Num\u00e9ro de colis d\u2019origine.<br/><br/>Obligatoire pour un colis Retour. </fr></lang>"
+    }
+  },
+  "description": "<lang><en>Mandatory for 7R and 5R return products. <br/><br/>Block containing Original data set(s).<br/>Up to 5 Original data sets are approved. Packages are identified all together with the 5 Original sets</en> <fr>Bloc contenant le (ou les) set(s) de donn\u00e9es Original. <br/><br/> Obligatoire pour les produits retours inter (7R) hors UE et 5R (OM). <br/><br/> Au plus 5 sets de donn\u00e9es Original sont agr\u00e9\u00e9s.<br/><br/> Les colis sont identifi\u00e9s selon l\u2019ensemble </fr></lang>"
+}

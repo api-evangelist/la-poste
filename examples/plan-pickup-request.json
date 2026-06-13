@@ -1,0 +1,19 @@
+{
+  "contractNumber": "YOUR_CONTRACT_NUMBER",
+  "password": "YOUR_PASSWORD",
+  "parcelNumber": "6X1234567890",
+  "pickupDate": "2026-06-14",
+  "pickupTimeSlot": "10H_12H",
+  "sender": {
+    "company": "Ma Societe SAS",
+    "lastName": "Dupont",
+    "firstName": "Jean",
+    "line2": "10 Rue de la Paix",
+    "countryCode": "FR",
+    "city": "Paris",
+    "zipCode": "75001",
+    "phoneNumber": "0600000000",
+    "mobileNumber": "0600000000",
+    "email": "jean.dupont@example.fr"
+  }
+}
