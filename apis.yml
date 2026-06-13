@@ -1,0 +1,205 @@
+name: La Poste
+description: La Poste is the French national postal service, offering a developer platform called Okapi that exposes REST APIs for parcel tracking, address validation, geolocation, registered letter ordering, certified document exchange (Digiposte), and open data access (dataNOVA). APIs require an X-Okapi-Key obtained by registering a free developer account.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Postal
+  - Parcel Tracking
+  - Address Validation
+  - Geolocation
+  - Shipping
+  - Open Data
+  - France
+apis:
+  - name: La Poste Suivi (Tracking) API
+    description: Harmonizes delivery status for tracked mail, Colissimo parcels, and Chronopost shipments in real time. Authenticate with an X-Okapi-Key header obtained by subscribing to the Suivi plan on the Okapi developer portal.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis/suivi@latest
+    baseURL: https://api.laposte.fr
+    tags:
+      - Parcel Tracking
+      - Shipment Status
+      - Colissimo
+      - Chronopost
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/products/suivi/latest
+      - type: OpenAPI
+        url: https://developer.laposte.fr/products/suivi/2/swagger
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/suivi-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/suivi-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste ControlAdresse API
+    description: Validates, standardises, and enriches postal addresses for users, customers, or prospects in France. Returns CEDEX-normalised address data including street, locality, postcode, and geocoordinates.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis/controladresse@2
+    baseURL: https://api.laposte.fr
+    tags:
+      - Address Validation
+      - Address Normalisation
+      - CEDEX
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/catalog-apis/controladresse@2
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/controladresse-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/controladresse-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste Geolocalisation API
+    description: Returns GPS coordinates for a given French postal address. Enables rapid and simple address geocoding integrated via the Okapi platform.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis
+    baseURL: https://api.laposte.fr
+    tags:
+      - Geolocation
+      - Geocoding
+      - GPS Coordinates
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/catalog-apis
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/geolocalisation-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/geolocalisation-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste Geolocalisation Inversee API
+    description: Reverse-geocoding API that identifies the five closest French addresses from a given geographic point within a configurable radius.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis
+    baseURL: https://api.laposte.fr
+    tags:
+      - Reverse Geocoding
+      - Geolocation
+      - Nearby Addresses
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/catalog-apis
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/geolocalisation-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/geolocalisation-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste Colissimo Shipping API
+    description: REST web service for creating Colissimo parcel shipping labels, generating customs documents for international shipments, and submitting electronic pre-advice to La Poste. Supports A4 and thermal label formats.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.colissimo.entreprise.laposte.fr/
+    baseURL: https://ws.colissimo.fr/sls-ws/SlsServiceWSRest/2.0
+    tags:
+      - Colissimo
+      - Shipping Labels
+      - Parcel
+      - Customs Documents
+    properties:
+      - type: Documentation
+        url: https://www.colissimo.fr/doc-colissimo/redoc-sls/en
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/colissimo-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/colissimo-rate-limits.yml
+    contact:
+      - FN: Colissimo Business Services
+        url: https://www.colissimo.entreprise.laposte.fr/
+        email: ''
+  - name: La Poste LReL (Lettre Recommandee en Ligne) API
+    description: API for ordering online registered letters (LReL) — La Poste prints, envelopes, franks and distributes the physical letter on behalf of the requester. Uses OAuth2 authentication. Accessible via the Okapi developer platform.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis
+    baseURL: https://api.laposte.fr
+    tags:
+      - Registered Letter
+      - Certified Mail
+      - LReL
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/catalog-apis
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/lrel-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/lrel-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste Digiposte API
+    description: Enables business applications to send certified documents directly to a recipient's Digiposte digital safe and retrieve authenticated documents with probative value from Digiposte users (v3). Uses OAuth2 authentication.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.laposte.fr/catalog-apis/digiposte@3
+    baseURL: https://api.laposte.fr
+    tags:
+      - Certified Documents
+      - Digital Safe
+      - Digiposte
+      - eDelivery
+    properties:
+      - type: Documentation
+        url: https://developer.laposte.fr/catalog-apis/digiposte@3
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/digiposte-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/digiposte-rate-limits.yml
+    contact:
+      - FN: La Poste Developer Support
+        url: https://developer.laposte.fr/
+        email: ''
+  - name: La Poste dataNOVA Open Data API
+    description: Open data portal powered by OpenDataSoft exposing 18+ datasets including postal office locations, street mailbox listings, postal codes (HEXASMAL), business registrations (SIRENE), and postal tariff tables. Supports JSON, CSV, GeoJSON, and Shapefile exports.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://datanova.laposte.fr/
+    baseURL: https://datanova.laposte.fr/api
+    tags:
+      - Open Data
+      - Postal Codes
+      - Delivery Points
+      - Post Offices
+      - SIRENE
+    properties:
+      - type: Documentation
+        url: https://datanova.laposte.fr/datasets
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/plans/datanova-plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/datanova-rate-limits.yml
+    contact:
+      - FN: dataNOVA Support
+        url: https://datanova.laposte.fr/
+        email: ''
+common:
+  - type: Portal
+    url: https://developer.laposte.fr/
+  - type: APIStatusPage
+    url: https://developer.laposte.fr/status/api
+  - type: TermsOfService
+    url: https://developer.laposte.fr/
+  - type: Authentication
+    url: https://faq.developer.laposte.fr/kb/fr/souscrire-a-une-api-347839
+  - type: FAQ
+    url: https://faq.developer.laposte.fr/
+  - type: GettingStarted
+    url: https://faq.developer.laposte.fr/
+  - type: CLI
+    url: https://github.com/DeveloperLaPoste/okapi-cli
+  - type: SDKs
+    url: https://github.com/DeveloperLaPoste/okapi-sdk-js
+  - type: GitHubOrganization
+    url: https://github.com/DeveloperLaPoste
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

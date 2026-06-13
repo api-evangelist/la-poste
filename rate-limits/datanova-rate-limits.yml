@@ -1,0 +1,17 @@
+name: La Poste dataNOVA Open Data API Rate Limits
+description: Rate limiting for the La Poste dataNOVA open data portal (OpenDataSoft platform).
+rateLimits:
+  - name: Anonymous Request Limit
+    description: Unauthenticated requests to the OpenDataSoft platform are subject to platform-level throttling. Specific thresholds are not published; clients should implement retry logic and caching to avoid being throttled.
+    limit: varies
+    period: day
+    scope: IP address (unauthenticated)
+  - name: Authenticated Request Limit
+    description: Registered users may receive higher API quotas. Contact dataNOVA support for details.
+    limit: higher
+    period: day
+    scope: API key / registered account
+notes:
+  - dataNOVA is built on the OpenDataSoft platform; rate limits follow OpenDataSoft's standard policies.
+  - Datasets are updated periodically (some daily); clients should cache responses rather than polling continuously.
+  - Bulk dataset downloads (CSV/GeoJSON exports) should be preferred over repeated API queries for large data volumes.

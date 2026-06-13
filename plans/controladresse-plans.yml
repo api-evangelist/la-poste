@@ -1,0 +1,28 @@
+name: La Poste ControlAdresse API Plans
+description: Subscription plans for the La Poste ControlAdresse v2 address validation API on the Okapi developer platform.
+plans:
+  - name: Free
+    description: Free-tier access to ControlAdresse v2 for address normalisation and validation. Requires a free Okapi developer account and X-Okapi-Key.
+    url: https://developer.laposte.fr/catalog-apis/controladresse@2
+    price: 0.00
+    currency: EUR
+    unit: month
+    rateLimits:
+      - name: Per-Minute Quota
+        description: Consumption may be limited to protect against high-volume abuse. HTTP 429 is returned when quota is reached.
+        limit: 100
+        period: minute
+    features:
+      - Address standardisation to La Poste CEDEX format
+      - Postcode and locality validation for metropolitan France and DOM-TOM
+      - Sandbox environment for testing
+  - name: Paid / Business
+    description: Higher-volume or SLA-backed plan for business integrations. Contact La Poste via the Okapi portal for pricing and terms.
+    url: https://developer.laposte.fr/catalog-apis/controladresse@2
+    price: contact
+    currency: EUR
+    unit: month
+    features:
+      - Higher request quotas
+      - SLA guarantees
+      - Dedicated support

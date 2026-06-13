@@ -1,0 +1,15 @@
+name: La Poste LReL (Lettre Recommandee en Ligne) API Plans
+description: Subscription plans for the La Poste LReL API for ordering online registered letters via the Okapi developer platform.
+plans:
+  - name: Business Subscription
+    description: Access to the LReL API requires a business account and subscription via the Okapi portal. La Poste prints, envelopes, franks, and physically distributes the registered letter on behalf of the customer. Pricing is per letter dispatched; API access itself is free once subscribed.
+    url: https://developer.laposte.fr/catalog-apis
+    price: contact
+    currency: EUR
+    unit: per letter
+    features:
+      - Automated registered letter ordering via REST API
+      - OAuth2 authentication
+      - La Poste handles physical printing and distribution
+      - Delivery tracking integration
+      - Proof of deposit and delivery

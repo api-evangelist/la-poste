@@ -1,0 +1,21 @@
+name: La Poste Suivi (Tracking) API Rate Limits
+description: Rate limiting policies for the La Poste Suivi v2 API on the Okapi platform.
+rateLimits:
+  - name: Free Tier Per-Minute Quota
+    description: The Okapi platform enforces a quota to protect APIs from high-volume abuse. When the limit is reached the platform returns HTTP 429 with the message "max quota reached 100 calls per minute". The limit resets at the start of the next minute.
+    limit: 100
+    period: minute
+    scope: application key (X-Okapi-Key)
+    header: X-Okapi-Key
+    errorCode: 429
+    errorMessage: max quota reached 100 calls per minute
+  - name: Business / Contracted Quota
+    description: Higher per-minute and daily quotas are available under a paid or negotiated business plan. Specific thresholds are defined in the service contract and listed on the API catalog page.
+    limit: custom
+    period: custom
+    scope: application key
+notes:
+  - Rate limits are enforced per application key, not per IP address.
+  - Sandbox environment calls may have different (typically lower) limits.
+  - La Poste recommends monitoring the real-time dashboard in the Okapi portal to track consumption against quotas.
+  - Source https://faq.developer.laposte.fr/kb/guide/fr/quelles-sont-les-limites-a-lusage-de-certaines-apis-38p1G2yLgE/Steps/2877151

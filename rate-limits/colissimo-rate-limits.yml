@@ -1,0 +1,12 @@
+name: La Poste Colissimo Shipping API Rate Limits
+description: Rate limiting considerations for the Colissimo SLS REST web service (ws.colissimo.fr).
+rateLimits:
+  - name: Business Contract Quota
+    description: The Colissimo SLS REST web service is accessed under a business contract. La Poste does not publish explicit per-minute rate limits for this service. Throughput limits are defined per contract and enforced by the Colissimo platform. Clients should implement retry logic with exponential back-off when encountering HTTP 429 or 503 responses.
+    limit: contract-defined
+    period: custom
+    scope: account credentials (login/password)
+notes:
+  - The Colissimo API operates on a separate platform (ws.colissimo.fr) from the Okapi portal.
+  - Batch label creation should be rate-controlled by the client to avoid throttling.
+  - Contact Colissimo business support for specific throughput allowances.

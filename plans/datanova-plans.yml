@@ -1,0 +1,20 @@
+name: La Poste dataNOVA Open Data API Plans
+description: Access plans for the La Poste dataNOVA open data portal powered by OpenDataSoft.
+plans:
+  - name: Open / Free
+    description: All datasets on dataNOVA are publicly available at no cost under open data licences. No API key is required for standard dataset queries. Supports JSON, CSV, GeoJSON, Excel, and Shapefile exports.
+    url: https://datanova.laposte.fr/
+    price: 0.00
+    currency: EUR
+    unit: month
+    rateLimits:
+      - name: Anonymous Rate Limit
+        description: Standard OpenDataSoft platform rate limiting applies to unauthenticated requests. Authenticated accounts may receive higher quotas.
+        limit: varies
+        period: day
+    features:
+      - 18+ datasets including postal codes (HEXASMAL), post office locations, street mailbox schedules, SIRENE business registry, and postal tariff tables
+      - Multiple export formats (JSON, CSV, GeoJSON, Excel, Shapefile)
+      - Full-text search and faceted filtering
+      - Geographic clustering and map visualisation
+      - Catalogue API for programmatic dataset discovery

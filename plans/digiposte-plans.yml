@@ -1,0 +1,14 @@
+name: La Poste Digiposte API Plans
+description: Subscription plans for the Digiposte API (v3) for certified document sending and authenticated document retrieval via the Okapi developer platform.
+plans:
+  - name: Business Subscription
+    description: Access to the Digiposte API requires a business agreement with La Poste. OAuth2 credentials are provisioned per contract. Pricing is typically per document sent to a Digiposte digital safe.
+    url: https://developer.laposte.fr/catalog-apis/digiposte@3
+    price: contact
+    currency: EUR
+    unit: per document
+    features:
+      - Send certified documents directly to a recipient Digiposte safe
+      - Retrieve documents with probative value from authorised Digiposte users
+      - OAuth2 authentication
+      - Supports dematerialised pay slips, invoices, and official notices

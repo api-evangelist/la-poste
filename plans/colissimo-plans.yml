@@ -1,0 +1,15 @@
+name: La Poste Colissimo Shipping API Plans
+description: Access plans for the Colissimo Simple Label Solution (SLS) REST web service for shipping label creation and parcel pre-advice submission.
+plans:
+  - name: Business Contract
+    description: Access to the Colissimo SLS REST web service requires an active Colissimo business contract with La Poste. Credentials (login/password) are provided upon contract activation. There is no public free tier; the API is intended for e-commerce merchants and business shippers.
+    url: https://www.colissimo.entreprise.laposte.fr/
+    price: contact
+    currency: EUR
+    unit: month
+    features:
+      - Create Colissimo parcel shipping labels (A4 and thermal formats)
+      - Generate customs documents (CN23) for international shipments
+      - Electronic pre-advice submission to La Poste
+      - Support for domestic, European, and international delivery products
+      - Return parcel label creation

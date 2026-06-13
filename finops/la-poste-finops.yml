@@ -1,0 +1,40 @@
+name: La Poste API FinOps
+description: Cost management and financial operations guidance for La Poste Okapi and Colissimo APIs.
+costModel:
+  - api: Suivi (Tracking) API
+    model: Free tier available; paid plans for higher volume
+    currency: EUR
+    notes: Free subscription via Okapi developer portal. Business pricing available on request. No per-call charge on the free tier within quota.
+  - api: ControlAdresse API
+    model: Free tier available; paid plans for higher volume
+    currency: EUR
+    notes: Free subscription via Okapi developer portal. Business pricing on request.
+  - api: Geolocalisation API
+    model: Free tier available; paid plans for higher volume
+    currency: EUR
+    notes: Free subscription via Okapi developer portal. Business pricing on request.
+  - api: Colissimo Shipping API
+    model: Per-contract; pricing tied to parcel volume and Colissimo business agreement
+    currency: EUR
+    notes: No public per-call pricing. Costs are determined by the Colissimo business contract. Pricing is linked to shipment volumes negotiated with La Poste.
+  - api: LReL (Lettre Recommandee en Ligne) API
+    model: Per-letter charge; API access free once subscribed
+    currency: EUR
+    notes: Physical registered letters are billed per item dispatched under the La Poste LReL tariff schedule. Check current postal tariffs at datanova.laposte.fr for enterprise rates.
+  - api: Digiposte API
+    model: Per-document charge under business agreement
+    currency: EUR
+    notes: Costs are negotiated with La Poste. No public pricing; contact La Poste business services.
+  - api: dataNOVA Open Data API
+    model: Free and open
+    currency: EUR
+    notes: All dataNOVA datasets are freely available under open data licences. No cost for API access.
+costOptimisation:
+  - Cache tracking responses aggressively — parcel status changes infrequently; cache for 5-10 minutes to stay within the 100 calls/minute Okapi quota.
+  - Use bulk CSV/GeoJSON exports from dataNOVA instead of repeated API queries for large static datasets such as postal codes or post office locations.
+  - Monitor consumption via the Okapi real-time dashboard to detect unexpected spikes before they cause quota overruns.
+  - Implement exponential back-off and retry on HTTP 429 responses across all Okapi APIs to avoid hammering the rate limit.
+  - For LReL, batch letter orders where business processes allow rather than sending one-at-a-time API calls.
+budgetAlerts:
+  - Set up monitoring on your Okapi portal consumption dashboard to receive alerts as you approach plan limits.
+  - For Colissimo, reconcile monthly shipment volumes against contract thresholds to avoid overage charges.

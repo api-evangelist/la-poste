@@ -1,0 +1,35 @@
+name: La Poste Suivi (Tracking) API Plans
+description: Subscription plans for the La Poste Suivi v2 (Tracking) API available on the Okapi developer platform.
+plans:
+  - name: Free
+    description: Default free-tier access to the Suivi v2 tracking API. Subscribe via the Okapi developer portal to receive an X-Okapi-Key at no cost. Suitable for development, testing, and low-volume production use.
+    url: https://developer.laposte.fr/products/suivi/latest
+    price: 0.00
+    currency: EUR
+    unit: month
+    rateLimits:
+      - name: Per-Minute Quota
+        description: Up to 100 API calls per minute per application key. Exceeding this limit returns HTTP 429.
+        limit: 100
+        period: minute
+    features:
+      - Real-time tracking for tracked mail, Colissimo parcels, and Chronopost shipments
+      - X-Okapi-Key API authentication
+      - Sandbox environment available
+      - Harmonised status codes across all shipment types
+  - name: Paid / Business
+    description: Higher-volume or SLA-backed plans for business integrations. Specific terms and pricing are negotiated directly with La Poste and listed on each API's catalog page on the Okapi portal.
+    url: https://developer.laposte.fr/products/suivi/latest
+    price: contact
+    currency: EUR
+    unit: month
+    rateLimits:
+      - name: Custom Quota
+        description: Rate limits and daily/monthly quotas are defined per contract.
+        limit: custom
+        period: custom
+    features:
+      - Higher request quotas
+      - SLA guarantees
+      - Dedicated support channel
+      - Production environment access

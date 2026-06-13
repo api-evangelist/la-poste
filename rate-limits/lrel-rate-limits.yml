@@ -1,0 +1,14 @@
+name: La Poste LReL API Rate Limits
+description: Rate limiting considerations for the La Poste LReL (Lettre Recommandee en Ligne) API on the Okapi platform.
+rateLimits:
+  - name: Okapi Platform Quota
+    description: Like other Okapi-hosted APIs, the LReL API may be subject to the platform-level quota of 100 calls per minute per application key. HTTP 429 is returned when the limit is exceeded.
+    limit: 100
+    period: minute
+    scope: application key (OAuth2 token)
+    errorCode: 429
+    errorMessage: max quota reached 100 calls per minute
+notes:
+  - The LReL API uses OAuth2 authentication rather than a plain X-Okapi-Key.
+  - Rate limits are primarily constrained by business volume agreements since each call results in a physical letter being produced and dispatched.
+  - Source https://faq.developer.laposte.fr/kb/guide/fr/quelles-sont-les-limites-a-lusage-de-certaines-apis-38p1G2yLgE/Steps/2877151

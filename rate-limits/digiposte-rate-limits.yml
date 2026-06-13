@@ -1,0 +1,14 @@
+name: La Poste Digiposte API Rate Limits
+description: Rate limiting considerations for the La Poste Digiposte v3 API on the Okapi platform.
+rateLimits:
+  - name: Okapi Platform Quota
+    description: The Digiposte API is subject to Okapi platform-level quotas. HTTP 429 is returned when the per-minute limit is exceeded.
+    limit: 100
+    period: minute
+    scope: OAuth2 access token
+    errorCode: 429
+    errorMessage: max quota reached 100 calls per minute
+notes:
+  - Digiposte API uses OAuth2 authentication.
+  - Higher quotas are negotiated as part of the business agreement.
+  - Source https://faq.developer.laposte.fr/kb/guide/fr/quelles-sont-les-limites-a-lusage-de-certaines-apis-38p1G2yLgE/Steps/2877151
