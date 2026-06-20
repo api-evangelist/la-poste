@@ -1,6 +1,6 @@
 name: La Poste
 description: La Poste is the French national postal service, offering a developer platform called Okapi that exposes REST APIs for parcel tracking, address validation, geolocation, registered letter ordering, certified document exchange (Digiposte), and open data access (dataNOVA). APIs require an X-Okapi-Key obtained by registering a free developer account.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -16,7 +16,7 @@ tags:
 apis:
   - name: La Poste Suivi (Tracking) API
     description: Harmonizes delivery status for tracked mail, Colissimo parcels, and Chronopost shipments in real time. Authenticate with an X-Okapi-Key header obtained by subscribing to the Suivi plan on the Okapi developer portal.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis/suivi@latest
     baseURL: https://api.laposte.fr
     tags:
@@ -39,7 +39,7 @@ apis:
         email: ''
   - name: La Poste ControlAdresse API
     description: Validates, standardises, and enriches postal addresses for users, customers, or prospects in France. Returns CEDEX-normalised address data including street, locality, postcode, and geocoordinates.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis/controladresse@2
     baseURL: https://api.laposte.fr
     tags:
@@ -59,7 +59,7 @@ apis:
         email: ''
   - name: La Poste Geolocalisation API
     description: Returns GPS coordinates for a given French postal address. Enables rapid and simple address geocoding integrated via the Okapi platform.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis
     baseURL: https://api.laposte.fr
     tags:
@@ -79,7 +79,7 @@ apis:
         email: ''
   - name: La Poste Geolocalisation Inversee API
     description: Reverse-geocoding API that identifies the five closest French addresses from a given geographic point within a configurable radius.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis
     baseURL: https://api.laposte.fr
     tags:
@@ -99,7 +99,7 @@ apis:
         email: ''
   - name: La Poste Colissimo Shipping API
     description: REST web service for creating Colissimo parcel shipping labels, generating customs documents for international shipments, and submitting electronic pre-advice to La Poste. Supports A4 and thermal label formats.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.colissimo.entreprise.laposte.fr/
     baseURL: https://ws.colissimo.fr/sls-ws/SlsServiceWSRest/2.0
     tags:
@@ -122,7 +122,7 @@ apis:
         email: ''
   - name: La Poste LReL (Lettre Recommandee en Ligne) API
     description: API for ordering online registered letters (LReL) — La Poste prints, envelopes, franks and distributes the physical letter on behalf of the requester. Uses OAuth2 authentication. Accessible via the Okapi developer platform.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis
     baseURL: https://api.laposte.fr
     tags:
@@ -142,7 +142,7 @@ apis:
         email: ''
   - name: La Poste Digiposte API
     description: Enables business applications to send certified documents directly to a recipient's Digiposte digital safe and retrieve authenticated documents with probative value from Digiposte users (v3). Uses OAuth2 authentication.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.laposte.fr/catalog-apis/digiposte@3
     baseURL: https://api.laposte.fr
     tags:
@@ -163,7 +163,7 @@ apis:
         email: ''
   - name: La Poste dataNOVA Open Data API
     description: Open data portal powered by OpenDataSoft exposing 18+ datasets including postal office locations, street mailbox listings, postal codes (HEXASMAL), business registrations (SIRENE), and postal tariff tables. Supports JSON, CSV, GeoJSON, and Shapefile exports.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://datanova.laposte.fr/
     baseURL: https://datanova.laposte.fr/api
     tags:
