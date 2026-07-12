@@ -184,6 +184,10 @@ apis:
         url: https://datanova.laposte.fr/
         email: ''
 common:
+  - type: VulnerabilityDisclosure
+    url: security/la-poste-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/la-poste-domain-security.yml
   - type: Portal
     url: https://developer.laposte.fr/
   - type: APIStatusPage
