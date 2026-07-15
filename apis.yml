@@ -184,6 +184,8 @@ apis:
         url: https://datanova.laposte.fr/
         email: ''
 common:
+  - type: AgenticAccess
+    url: agentic-access/la-poste-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/la-poste-vulnerability-disclosure.yml
   - type: DomainSecurity
