@@ -1,0 +1,19 @@
+{
+  "provider": "la-poste",
+  "sources": [
+    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml",
+    "la-poste-slsservicews-documentation-api-openapi.yml"
+  ],
+  "outputs": [
+    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml",
+    "la-poste-slsservicews-documentation-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [
+    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml: info.version missing",
+    "la-poste-slsservicews-documentation-api-openapi.yml: info.version missing"
+  ],
+  "notes": [],
+  "skipped": []
+}
