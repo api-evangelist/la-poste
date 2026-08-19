@@ -1,0 +1,218 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "La Poste SlsInternalService : Services destinés aux applications internes SlsServiceWS : documentation API"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SlsServiceWS : documentation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "checkGenerateLabel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/checkGenerateLabel",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>Data control without label generation</en><fr>Contrôle des données sans génération d'étiquette</fr></lang>"
+        },
+        {
+          "info": {
+            "name": "generateLabel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/generateLabel",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>This method is provided to create shipments in relation to the following solutions, regardless of the product or associated destination:<br/><br/>Offre France: Colissimo Domicile, Point Retrait, Retour,<br/>Offre Internationale: Colissimo Expert, Domicile, Point Retrait, Retour,<br/>Offre Outre-Mer: Colissimo Domicile and Colissimo Eco.<br/><br/><br/>The products currently concerned are listed in the paragraph <b>III. 1 Products available.</b> La Poste - Colissimo may modify this list."
+        },
+        {
+          "info": {
+            "name": "generateCN23",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/generateCN23",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><fr>Méthode permettant de générer le document douanier CN23</fr><en>Method for generating the CN23 customs document</en></lang>"
+        },
+        {
+          "info": {
+            "name": "getListMailBoxPickingDates",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/getListMailBoxPickingDates",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>The method <b>getListMailBoxPickingDates()</b> indicates whether an address is eligible for shipment from a mailbox and, if so, what the date and time are of the  <br/>parcel pick-up from this address. <br/><br/>This method will be used to validate the eligibility of the geographic address for a pick-up from a mailbox the next day, which then makes it possible to enter the pick-up date in the tag mailBoxPickingDate in the block Service when the subsequent shipping announcement is issue"
+        },
+        {
+          "info": {
+            "name": "getLabel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/getLabel",
+            "headers": [
+              {
+                "name": "login",
+                "value": ""
+              },
+              {
+                "name": "password",
+                "value": ""
+              },
+              {
+                "name": "apiKey",
+                "value": ""
+              },
+              {
+                "name": "accountNumber",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "getLabel"
+        },
+        {
+          "info": {
+            "name": "generateBordereauByParcelsNumbers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/generateBordereauByParcelsNumbers",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><fr>Remarque : les colis dans le document doivent tous avoir été généré par le même compte. Si nécessaire, il est possible de faire autant d'appels au service que de compte.</fr><en>Note: the packages in the document must all have been generated by the same account. If necessary, it is possible to make multiple calls as there are accounts.</en></lang>"
+        },
+        {
+          "info": {
+            "name": "generateToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/generateToken",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>This method generates a token and associated documents if the customer wishes to secure the printing of these return labels. <br/><br/> The token and documents will enable customers to re-print a label at a post office or pick points.</en><fr></fr></lang>"
+        },
+        {
+          "info": {
+            "name": "getProductInter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/getProductInter",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>This function, exclusively dedicated to international shipments, provides the return options compatible with the requested destination (e.g. <b>\"paid return\", \"do not return\"</b>). <br/><br/> The return option entered is transmitted to our international partners to indicate what action is required if the parcel cannot be delivered to the addressee </en><fr>Cette fonction, dédiée exclusivement aux envois internationaux, fournit les options de retour compatibles avec la destination deman"
+        },
+        {
+          "info": {
+            "name": "planPickup",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://api-etiquetage.colis.intra.laposte.fr/sls-ws/SlsServiceRest/planPickup",
+            "headers": [
+              {
+                "name": "apiKey",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<lang><en>The method <b>planPickup ()</b> allows you to make a request for picking up a return parcel deposited by the sender in their mailbox. The parcel needs to have been previously announced with La Poste. This method will be used to confirm firmly the pick-up on the chosen date, after first announcing the shipment by means of the method GenerateLabel. This method is compatible with product code CORE (8R Colissimo Retour France) and CORF (CQ Colissimo Retour International)</en><fr>La méthode"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
