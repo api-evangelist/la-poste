@@ -183,7 +183,8 @@ apis:
     for slsinternalservice : services destinés aux applications internes.
   humanURL: https://developer.laposte.fr/catalog-apis/suivi@latest
   baseURL: https://api.laposte.fr
-  tags:
+  tags: []
+  tags_raw:
   - 'SlsInternalService : Services destinés aux applications internes'
   properties:
   - type: OpenAPI
