@@ -1,0 +1,26 @@
+slug: la-poste
+provider: La Poste
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Transportation & Logistics
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: 'SlsInternalService : Services destinés aux applications internes'
+  spec_file: la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml
+  capability_id: BC-2420.30
+  capability_id_l1: BC-2420
+  capability_name: Pickup and Drayage Operations Management
+  confidence: 0.72
+  evidence: POST /SlsInternalService/planPickup; POST /SlsInternalService/getListMailBoxPickingDates;
+    schema PlanPickupRequest
+  reason: Operations check pickup feasibility, list available mailbox picking dates and schedule a pickup
+    — first-mile collection scheduling from the sender. Confidence moderate as it is an internal-facing
+    variant with no descriptions beyond the operation names.

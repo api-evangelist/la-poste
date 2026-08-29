@@ -246,6 +246,9 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/la-poste/refs/heads/main/rate-limits/colissimo-rate-limits.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/la-poste-capability-edges.yml
+    name: La Poste Business Capability Map
   - type: AgenticAccess
     url: agentic-access/la-poste-agentic-access.yml
   - type: VulnerabilityDisclosure
