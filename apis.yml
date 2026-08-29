@@ -1,5 +1,17 @@
 name: La Poste
 description: La Poste is the French national postal service, offering a developer platform called Okapi that exposes REST APIs for parcel tracking, address validation, geolocation, registered letter ordering, certified document exchange (Digiposte), and open data access (dataNOVA). APIs require an X-Okapi-Key obtained by registering a free developer account.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
