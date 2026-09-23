@@ -1,8 +1,7 @@
 {
   "provider": "la-poste",
   "sources": [
-    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml",
-    "la-poste-slsservicews-documentation-api-openapi.yml"
+    "_original/colissimo-shipping-openapi.json"
   ],
   "outputs": [
     "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml",
@@ -11,9 +10,18 @@
   "archived": [],
   "errors": [],
   "warnings": [
-    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml: info.version missing",
-    "la-poste-slsservicews-documentation-api-openapi.yml: info.version missing"
+    "colissimo-shipping-openapi.json: info.title missing",
+    "colissimo-shipping-openapi.json: info.version missing"
   ],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "colissimo-shipping-openapi.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "colissimo-shipping-openapi.json: declared missing tag: SlsInternalService : Services destin\u00e9s aux applications internes",
+    "colissimo-shipping-openapi.json: declared missing tag: SlsServiceWS : documentation",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "la-poste-slsservicews-documentation-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
