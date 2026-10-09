@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: La Poste LReL (Lettre Recommandee en Ligne) API Plans
 description: Subscription plans for the La Poste LReL API for ordering online registered letters via the Okapi developer platform.
 plans:
@@ -13,3 +17,82 @@ plans:
       - La Poste handles physical printing and distribution
       - Delivery tracking integration
       - Proof of deposit and delivery
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  units:
+  - period
+  plans:
+  - name: Business Contract
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Paid / Business
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Open / Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Business Subscription
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Paid / Business
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Business Subscription
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - period
+    periods: []
+  - name: Paid / Business
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - period
+    periods: []
