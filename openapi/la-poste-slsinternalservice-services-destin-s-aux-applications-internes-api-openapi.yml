@@ -81,6 +81,33 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    GetListMailBoxPickingDatesSender:
+      required:
+      - zipCode
+      type: object
+      properties:
+        line0:
+          type: string
+          description: <i>AN35</i> <br/>  <lang><en>Floor, corridor, stairwell, flat number</en><fr>Etage, couloir, escalier, appartement.</fr></lang>
+        line1:
+          type: string
+          description: <i>AN35</i> <br/>  <lang><en>Entrance, building, residence. </en><fr>Entrée, b&acirc;timent, immeuble, résidence.</fr></lang>
+        line2:
+          type: string
+          description: '<i>AN35</i> <br/>  <lang><en>Number and street name. <br/><br/>Example: "5 rue du Bellay"</en><fr>Numéro et libellé de voie.<br/><br/>Example: \"5 rue du Bellay\"</fr></lang>'
+        line3:
+          type: string
+          description: <i>AN35</i> <br/>  <lang><en>Named place or other mention</en><fr>Lieu-dit ou autre mention.</fr></lang>
+        city:
+          type: string
+          description: <i>AN35</i> <br/>  <lang><en>Municipality</en><fr>Commune.</fr></lang>
+        zipCode:
+          type: string
+          description: <i>AN5</i> <br/>  <lang><en>Postcode</en><fr>Code postal.</fr></lang>
+        countryCode:
+          type: string
+          description: <i>A2</i> <br/>  <lang><en>Only the "FR" value is authorised. <br/>Country code.</en><fr>Code pays.<br/>Seule la valeur « FR » est autorisée.</fr></lang>
+      description: <i>SUB</i> <br/>  <lang><en>Block containing sender's address</en><fr>Bloc contenant les coordonnées du déposant en retour.</fr></lang>
     PlanPickupSender:
       required:
       - zipCode
@@ -123,33 +150,26 @@ components:
           type: string
           description: <i>AN15</i> <br/>  <lang><en>Telephone</en><fr>Téléphone.</fr></lang>
       description: <i>SUB</i> <br/>  <lang><en>Block containing sender's address</en><fr>Bloc contenant les coordonnées du déposant en retour.</fr></lang>
-    GetListMailBoxPickingDatesSender:
+    GetListMailBoxPickingDatesRetourRequest:
       required:
-      - zipCode
+      - sender
       type: object
       properties:
-        line0:
+        contractNumber:
           type: string
-          description: <i>AN35</i> <br/>  <lang><en>Floor, corridor, stairwell, flat number</en><fr>Etage, couloir, escalier, appartement.</fr></lang>
-        line1:
+          description: <i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in "Acess to the Web Service SLS/API Authentication".</en><fr>Obsolète. Utiliser l'apikey à la place comme expliqué dans "Accès au Web Service SLS/Authentification API".</fr></lang>
+        password:
           type: string
-          description: <i>AN35</i> <br/>  <lang><en>Entrance, building, residence. </en><fr>Entrée, b&acirc;timent, immeuble, résidence.</fr></lang>
-        line2:
-          type: string
-          description: '<i>AN35</i> <br/>  <lang><en>Number and street name. <br/><br/>Example: "5 rue du Bellay"</en><fr>Numéro et libellé de voie.<br/><br/>Example: \"5 rue du Bellay\"</fr></lang>'
-        line3:
-          type: string
-          description: <i>AN35</i> <br/>  <lang><en>Named place or other mention</en><fr>Lieu-dit ou autre mention.</fr></lang>
-        city:
-          type: string
-          description: <i>AN35</i> <br/>  <lang><en>Municipality</en><fr>Commune.</fr></lang>
-        zipCode:
-          type: string
-          description: <i>AN5</i> <br/>  <lang><en>Postcode</en><fr>Code postal.</fr></lang>
-        countryCode:
-          type: string
-          description: <i>A2</i> <br/>  <lang><en>Only the "FR" value is authorised. <br/>Country code.</en><fr>Code pays.<br/>Seule la valeur « FR » est autorisée.</fr></lang>
-      description: <i>SUB</i> <br/>  <lang><en>Block containing sender's address</en><fr>Bloc contenant les coordonnées du déposant en retour.</fr></lang>
+          description: <i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in "Acess to the Web Service SLS/API Authentication".</en><fr>Obsolète. Utiliser l'apikey à la place comme expliqué dans "Accès au Web Service SLS/Authentification API".</fr></lang>
+        sender:
+          $ref: '#/components/schemas/GetListMailBoxPickingDatesSender'
+    PlanPickupResponse:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
     ListMailBoxPickingDatesRetourOnlineResponse:
       type: object
       properties:
@@ -166,15 +186,6 @@ components:
             format: date-time
         validityTime:
           type: string
-    CheckInfoPlanPickupResponse:
-      type: object
-      properties:
-        messages:
-          type: array
-          items:
-            $ref: '#/components/schemas/Message'
-        isValid:
-          type: boolean
     Message:
       type: object
       properties:
@@ -197,26 +208,6 @@ components:
           format: date-time
         sender:
           $ref: '#/components/schemas/PlanPickupSender'
-    GetListMailBoxPickingDatesRetourRequest:
-      required:
-      - sender
-      type: object
-      properties:
-        contractNumber:
-          type: string
-          description: <i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in "Acess to the Web Service SLS/API Authentication".</en><fr>Obsolète. Utiliser l'apikey à la place comme expliqué dans "Accès au Web Service SLS/Authentification API".</fr></lang>
-        password:
-          type: string
-          description: <i>AN</i> <br/>  <lang><en>Deprecated. Use apikey instead as explained in "Acess to the Web Service SLS/API Authentication".</en><fr>Obsolète. Utiliser l'apikey à la place comme expliqué dans "Accès au Web Service SLS/Authentification API".</fr></lang>
-        sender:
-          $ref: '#/components/schemas/GetListMailBoxPickingDatesSender'
-    PlanPickupResponse:
-      type: object
-      properties:
-        messages:
-          type: array
-          items:
-            $ref: '#/components/schemas/Message'
     PlanPickupRequest:
       required:
       - mailBoxPickingDate
@@ -239,3 +230,12 @@ components:
           format: date-time
         sender:
           $ref: '#/components/schemas/PlanPickupSender'
+    CheckInfoPlanPickupResponse:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+        isValid:
+          type: boolean
