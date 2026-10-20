@@ -27,6 +27,26 @@ edges:
   detected_by: detect-carrier-edges.py
   first_seen: '2026-10-13'
   matched_by: domain:laposte.fr
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/421540/la-poste-lettre-recommandee/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - La Poste - LETTRE RECOMMANDEE
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Agent Productivity
 generated: '2026-10-12'
 method: searched
-checked: []
+checked:
+- zendesk/integrations/zendesk-integration-edges.yml
+source:
+- zendesk/integrations/zendesk-integration-edges.yml
