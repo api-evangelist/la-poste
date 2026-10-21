@@ -45,3 +45,15 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: la-poste-amazon-selling-partner-appstore
+  label: Amazon Selling Partner Appstore
+  partner: amazon-seller-central
+  partner_name: Amazon Selling Partner Appstore
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://sellercentral.amazon.com/selling-partner-appstore/dp/amzn1.sp.solution.ca8387c0-042a-4642-9cb4-e9a77465c80f
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

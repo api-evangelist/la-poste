@@ -44,9 +44,27 @@ edges:
   detected: '2026-10-20'
   detected_by: mirror-platform-listings.py
   category: Agent Productivity
+- partner_name: Amazon Selling Partner Appstore
+  partner: amazon-seller-central
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://sellercentral.amazon.com/selling-partner-appstore/dp/amzn1.sp.solution.ca8387c0-042a-4642-9cb4-e9a77465c80f
+  mirror_of: amazon-seller-central/integrations/amazon-seller-central-integration-edges.yml
+  apps:
+  - La Poste Pro Expéditions
+  detected: '2026-10-21'
+  detected_by: sweep-amazon-sp-api-appstore.py
 generated: '2026-10-12'
 method: searched
 checked:
 - zendesk/integrations/zendesk-integration-edges.yml
+- https://advertising.amazon.com/partners/directory
+- https://sellercentral.amazon.com/gspn
+- https://sellercentral.amazon.com/selling-partner-appstore
 source:
 - zendesk/integrations/zendesk-integration-edges.yml
