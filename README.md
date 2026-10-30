@@ -64,41 +64,189 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-La Poste is the French national postal service. Its developer platform, Okapi (developer.laposte.fr), exposes a suite of REST APIs covering parcel tracking, address validation, geolocation, registered letter ordering, certified document exchange, and open data access.
+La Poste is the French national postal service, offering a developer platform called Okapi that exposes REST APIs for parcel tracking, address validation, geolocation, registered letter ordering, certified document exchange (Digiposte), and open data access (dataNOVA). APIs require an X-Okapi-Key obtained by registering a free developer account.
 
-## Developer Portal
+**Areas:** Postal · Parcel Tracking · Address Validation · Geolocation · Shipping · Open Data · France
 
-https://developer.laposte.fr/
+## La Poste on APIs.io
 
-## APIs
+Everything profiled for La Poste is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/la-poste/](https://apis.io/providers/la-poste/)** — or go straight to one of the APIs or properties below.
 
-| API | Description | Auth |
-|-----|-------------|------|
-| Suivi v2 | Real-time tracking for tracked mail, Colissimo parcels, and Chronopost shipments | X-Okapi-Key |
-| ControlAdresse v2 | Validate and normalise French postal addresses to La Poste CEDEX standard | X-Okapi-Key |
-| Geolocalisation | Forward-geocode a French address to GPS coordinates | X-Okapi-Key |
-| Geolocalisation Inversee | Reverse-geocode — find the five closest addresses from a GPS point | X-Okapi-Key |
-| Colissimo SLS REST | Create shipping labels and customs documents; submit electronic parcel pre-advice | Login/password (business contract) |
-| LReL | Order online registered letters — La Poste prints and delivers physically | OAuth2 |
-| Digiposte v3 | Send certified documents to a Digiposte digital safe; retrieve authenticated documents | OAuth2 |
-| dataNOVA | Open data portal — postal codes, post office locations, mailbox schedules, SIRENE | None (open) |
+### APIs (8)
 
-## Authentication
+- [La Poste ControlAdresse API](https://apis.io/apis/la-poste/la-poste-controladresse-api/) — Validates, standardises, and enriches postal addresses for users, customers, or prospects in France. Returns CEDEX-normalised address data including street,…
+- [La Poste Geolocalisation API](https://apis.io/apis/la-poste/la-poste-geolocalisation-api/) — Returns GPS coordinates for a given French postal address. Enables rapid and simple address geocoding integrated via the Okapi platform.
+- [La Poste Geolocalisation Inversee API](https://apis.io/apis/la-poste/la-poste-geolocalisation-inversee-api/) — Reverse-geocoding API that identifies the five closest French addresses from a given geographic point within a configurable radius.
+- [La Poste LReL (Lettre Recommandee en Ligne) API](https://apis.io/apis/la-poste/la-poste-lrel-lettre-recommandee-en-ligne-api/) — API for ordering online registered letters (LReL) — La Poste prints, envelopes, franks and distributes the physical letter on behalf of the requester. Uses…
+- [La Poste Digiposte API](https://apis.io/apis/la-poste/la-poste-digiposte-api/) — Enables business applications to send certified documents directly to a recipient's Digiposte digital safe and retrieve authenticated documents with…
+- [La Poste dataNOVA Open Data API](https://apis.io/apis/la-poste/la-poste-datanova-open-data-api/) — Open data portal powered by OpenDataSoft exposing 18+ datasets including postal office locations, street mailbox listings, postal codes (HEXASMAL), business…
+- [La Poste SlsInternalService : Services destinés aux applications internes API](https://apis.io/apis/la-poste/la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api/) — The SlsInternalService : Services destinés aux applications internes API from La Poste — 3 operation(s) for slsinternalservice : services destinés aux…
+- [La Poste SlsServiceWS : documentation API](https://apis.io/apis/la-poste/la-poste-slsservicews-documentation-api/) — The SlsServiceWS : documentation API from La Poste — 9 operation(s) for slsservicews : documentation.
 
-Most Okapi APIs authenticate via an `X-Okapi-Key` header. Register a free account at developer.laposte.fr, create an application, and subscribe to the desired API to obtain your key.
+### Published properties
 
-LReL and Digiposte APIs use OAuth2. Colissimo uses account credentials tied to a business contract.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Rate Limits
+#### Agentic access (1)
 
-The Okapi platform enforces a default quota of **100 calls per minute** per application key across free-tier APIs. Exceeding the quota returns HTTP 429. Business plans offer higher limits negotiated directly with La Poste.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-## Resources
+- [La Poste Agentic Access](https://apis.io/agentic-access/la-poste/la-poste-agentic-access/)
 
-- API Catalog: https://developer.laposte.fr/catalog-apis
-- Service Status: https://developer.laposte.fr/status/api
-- FAQ / Knowledge Base: https://faq.developer.laposte.fr/
-- CLI (okapi-cli): https://github.com/DeveloperLaPoste/okapi-cli
-- JavaScript SDK: https://github.com/DeveloperLaPoste/okapi-sdk-js
-- dataNOVA Open Data: https://datanova.laposte.fr/
-- Colissimo Business: https://www.colissimo.entreprise.laposte.fr/
+#### JSON Schema (72)
+
+The data models the API reads and writes.
+
+- [ActivationDataFlavor](https://apis.io/schemas/la-poste/activationdataflavor/)
+- [Address](https://apis.io/schemas/la-poste/address/)
+- [Addressee](https://apis.io/schemas/la-poste/addressee/)
+- [AddressPCH](https://apis.io/schemas/la-poste/addresspch/)
+- [AddressPickupLocation](https://apis.io/schemas/la-poste/addresspickuplocation/)
+- [Article](https://apis.io/schemas/la-poste/article/)
+- [BelgiumLabel](https://apis.io/schemas/la-poste/belgiumlabel/)
+- [Category](https://apis.io/schemas/la-poste/category/)
+- [CheckGenerateLabelRequest](https://apis.io/schemas/la-poste/checkgeneratelabelrequest/)
+- [CheckInfoPlanPickupInternalRequest](https://apis.io/schemas/la-poste/checkinfoplanpickupinternalrequest/)
+- [CheckInfoPlanPickupResponse](https://apis.io/schemas/la-poste/checkinfoplanpickupresponse/)
+- [CodeVAS](https://apis.io/schemas/la-poste/codevas/)
+- [CommandInfo](https://apis.io/schemas/la-poste/commandinfo/)
+- [CommandMap](https://apis.io/schemas/la-poste/commandmap/)
+- [Contents](https://apis.io/schemas/la-poste/contents/)
+- [CustomizationField](https://apis.io/schemas/la-poste/customizationfield/)
+- [CustomizationFields](https://apis.io/schemas/la-poste/customizationfields/)
+- [CustomizationTemplate](https://apis.io/schemas/la-poste/customizationtemplate/)
+- [CustomsDeclarations](https://apis.io/schemas/la-poste/customsdeclarations/)
+- [DataHandler](https://apis.io/schemas/la-poste/datahandler/)
+- [DataSource](https://apis.io/schemas/la-poste/datasource/)
+- [ElementVisual](https://apis.io/schemas/la-poste/elementvisual/)
+- [EntityTag](https://apis.io/schemas/la-poste/entitytag/)
+- [Field](https://apis.io/schemas/la-poste/field/)
+- [Fields](https://apis.io/schemas/la-poste/fields/)
+- …and 47 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [context Context](https://apis.io/jsonld/la-poste/context/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Check Generate Label Request](https://apis.io/examples/la-poste/check-generate-label-request/)
+- [Generate Label Request](https://apis.io/examples/la-poste/generate-label-request/)
+- [Generate Label Response](https://apis.io/examples/la-poste/generate-label-response/)
+- [Plan Pickup Request](https://apis.io/examples/la-poste/plan-pickup-request/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [La Poste SlsInternalService : Services destinés aux applications internes API](https://apis.io/collections/la-poste/open-la-poste-slsinternalservice-services-destin-s-aux-applications-internes-api/)
+- [La Poste SlsInternalService : Services destinés aux applications internes SlsServiceWS : documentation API](https://apis.io/collections/la-poste/open-la-poste-slsservicews-documentation-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [La Poste — jsonschema rules](https://apis.io/rules/la-poste/la-poste-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [La Poste Domain Security](https://apis.io/security/la-poste/la-poste-domain-security/)
+- [La Poste Vulnerability Disclosure](https://apis.io/security/la-poste/la-poste-vulnerability-disclosure/)
+
+#### Plans and pricing (7)
+
+Published plans, tiers and prices.
+
+- [Colissimo Plans](https://apis.io/plans/la-poste/colissimo-plans/)
+- [Controladresse Plans](https://apis.io/plans/la-poste/controladresse-plans/)
+- [Datanova Plans](https://apis.io/plans/la-poste/datanova-plans/)
+- [Digiposte Plans](https://apis.io/plans/la-poste/digiposte-plans/)
+- [Geolocalisation Plans](https://apis.io/plans/la-poste/geolocalisation-plans/)
+- [Lrel Plans](https://apis.io/plans/la-poste/lrel-plans/)
+- [Suivi Plans](https://apis.io/plans/la-poste/suivi-plans/)
+
+#### Rate limits (7)
+
+Published request limits.
+
+- [Colissimo Rate Limits](https://apis.io/rate-limits/la-poste/colissimo-rate-limits/)
+- [Controladresse Rate Limits](https://apis.io/rate-limits/la-poste/controladresse-rate-limits/)
+- [Datanova Rate Limits](https://apis.io/rate-limits/la-poste/datanova-rate-limits/)
+- [Digiposte Rate Limits](https://apis.io/rate-limits/la-poste/digiposte-rate-limits/)
+- [Geolocalisation Rate Limits](https://apis.io/rate-limits/la-poste/geolocalisation-rate-limits/)
+- [Lrel Rate Limits](https://apis.io/rate-limits/la-poste/lrel-rate-limits/)
+- [Suivi Rate Limits](https://apis.io/rate-limits/la-poste/suivi-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [La Poste Finops](https://apis.io/finops/la-poste/la-poste-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.laposte.fr/)
+- [Getting started](https://faq.developer.laposte.fr/)
+- [Terms of service](https://developer.laposte.fr/)
+- [GitHub](https://github.com/DeveloperLaPoste)
+
+## API Evangelist rating
+
+**Kin Score 29.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 41.9 |
+| Contract governance | 9.8 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 15.8 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 26.5** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/la-poste/](https://apis.io/providers/la-poste/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for La Poste: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/la-poste/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
